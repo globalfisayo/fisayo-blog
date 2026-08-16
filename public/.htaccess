@@ -1,0 +1,9 @@
+# SPA fallback for the blog: deep links like /blog/my-post are client-side
+# routes, not real files — serve index.html and let React Router render them.
+# This per-directory file overrides the WordPress rules in the parent folder.
+RewriteEngine On
+RewriteBase /blog/
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.html [L]

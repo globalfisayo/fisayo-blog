@@ -1,0 +1,80 @@
+# Pages CMS configuration — visual editor for the Fisayo.org blog.
+# Editors sign in at https://app.pagescms.org with GitHub (or via email invite).
+media:
+  input: public/uploads
+  output: /blog/uploads
+
+content:
+  - name: posts
+    label: Blog Posts
+    type: collection
+    path: src/data/posts
+    format: json
+    filename: '{fields.slug}.json'
+    view:
+      fields: [title, category, publication_date, is_featured]
+      primary: title
+      sort: [publication_date, title]
+      default:
+        search: ''
+        sort: publication_date
+        order: desc
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: slug
+        label: URL slug
+        type: string
+        required: true
+        pattern:
+          regex: '^[a-z0-9]+(?:-[a-z0-9]+)*$'
+          message: 'Lowercase letters and numbers only, words separated by hyphens (e.g. my-new-post)'
+        description: 'Becomes the web address of the post, e.g. "my-new-post" → fisayo.org/blog/my-new-post. Cannot be changed easily after publishing.'
+      - name: excerpt
+        label: Excerpt
+        type: text
+        required: true
+        description: 'One or two sentences shown on the blog cards and in search results.'
+      - name: content
+        label: Content
+        type: rich-text
+        required: true
+        options:
+          format: html
+      - name: author
+        label: Author
+        type: string
+        default: 'Fisayo Adeyemi'
+      - name: publication_date
+        label: Publication date
+        type: date
+        required: true
+      - name: category
+        label: Category
+        type: select
+        required: true
+        options:
+          values: [Investing, Career, Opportunities]
+      - name: is_featured
+        label: Featured post
+        type: boolean
+        default: false
+        description: 'Featured posts appear in the large grid at the top of the blog page.'
+      - name: featured_image
+        label: Featured image (upload)
+        type: image
+        description: 'Header image for the post. Leave empty to use a default image. For a link to an image hosted elsewhere, use the field below instead.'
+      - name: featured_image_url
+        label: Featured image link (paste a URL)
+        type: string
+        description: 'Optional. Paste a link to an image hosted elsewhere (e.g. https://... on Hostinger, the WordPress media library, etc.) instead of uploading. If set, this is used instead of the uploaded image above. Good for large images you do not want stored in the site.'
+      - name: pdf_url
+        label: Downloadable file (upload)
+        type: file
+        description: 'Optional. Upload a file (PDF, etc.) to show a "Download file" button in the sidebar. For large files, paste a link in the field below instead of uploading.'
+      - name: attachment_url
+        label: Downloadable file link (paste a URL)
+        type: string
+        description: 'Optional. Paste a link to a file hosted elsewhere (Hostinger, Google Drive, Dropbox, etc.). Use this for LARGE files to keep the site fast and within storage limits. If the upload above is empty, this link powers the "Download file" button.'

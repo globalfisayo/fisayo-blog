@@ -1,0 +1,57 @@
+name: Deploy blog to fisayo.org
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Never let two deploys interleave their upload/swap steps.
+concurrency:
+  group: deploy-blog
+  cancel-in-progress: true
+
+env:
+  # The blog is served from https://fisayo.org/blog/ — assets live under /blog/.
+  VITE_BASE: /blog/
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy to Hostinger over SSH
+        env:
+          SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+
+          tar -czf blog.tar.gz -C dist .
+
+          scp -P 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new \
+            blog.tar.gz u639443301@82.29.189.52:~/blog-deploy.tar.gz
+
+          # Unpack to a staging dir, then swap it in — visitors never see a
+          # half-written /blog/ directory.
+          ssh -p 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new \
+            u639443301@82.29.189.52 '
+              set -e
+              cd ~/domains/fisayo.org/public_html
+              rm -rf blog.new
+              mkdir blog.new
+              tar -xzf ~/blog-deploy.tar.gz -C blog.new
+              rm -rf blog.old
+              if [ -d blog ]; then mv blog blog.old; fi
+              mv blog.new blog
+              rm -rf blog.old ~/blog-deploy.tar.gz
+            '

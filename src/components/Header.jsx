@@ -61,7 +61,7 @@ const Header = () => {
 
         <div className="hidden lg:block">
           <Button asChild>
-            <a href="https://fisayo.org/opportunities/">Get Free Stuff!</a>
+            <a href="https://fisayo.org/opportunities/">Opportunity Universe</a>
           </Button>
         </div>
 
@@ -92,7 +92,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="mt-4">
-                <a href="https://fisayo.org/opportunities/">Get Free Stuff!</a>
+                <a href="https://fisayo.org/opportunities/">Opportunity Universe</a>
               </Button>
             </div>
           </SheetContent>

@@ -54,4 +54,11 @@ jobs:
               if [ -d blog ]; then mv blog blog.old; fi
               mv blog.new blog
               rm -rf blog.old ~/blog-deploy.tar.gz
+
+              # The WordPress nav dropdown ("Latest Insights") is rendered from
+              # blog/posts-index.json by a mu-plugin, and WordPress pages are
+              # cached by LiteSpeed for up to 7 days. Without this purge the
+              # main site keeps showing the previous newest post after a deploy.
+              cd ~/domains/fisayo.org/public_html
+              wp litespeed-purge all || echo "cache purge failed, continuing"
             '

@@ -1,0 +1,21 @@
+{
+  "title": "LEAP Emerge Fellowship",
+  "slug": "leap-emerge-fellowship",
+  "applyUrl": "https://www.leap.org/emerge",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-14",
+  "deadline": "2026-03-13",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/307f2057607c802c85d8d589127a7664"
+}

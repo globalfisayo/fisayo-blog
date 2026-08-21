@@ -1,0 +1,21 @@
+{
+  "title": "Astra Fellowship",
+  "slug": "astra-fellowship",
+  "applyUrl": "https://constellation.org/programs/astra",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-04-08",
+  "deadline": "2026-05-03",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/33cf2057607c809e86d0efc148f563a7"
+}

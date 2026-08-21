@@ -1,0 +1,21 @@
+{
+  "title": "L’ORÉAL fund for women",
+  "slug": "loreal-fund-for-women",
+  "applyUrl": "https://fundforwomen.loreal.com/ExternalUser/Login?ReturnUrl=%2F",
+  "types": [
+    "Grant"
+  ],
+  "status": "open",
+  "dateAdded": "2026-01-29",
+  "deadline": null,
+  "deadlineNote": "Check link for deadline",
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f7f2057607c80f79d1cc81d48cca536"
+}

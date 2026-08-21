@@ -1,0 +1,21 @@
+{
+  "title": "Interledger Fellowship Program",
+  "slug": "interledger-fellowship-program",
+  "applyUrl": "https://interledger.org/grant/ambassadors",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-04-08",
+  "deadline": "2026-06-15",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/33cf2057607c80af9d1ad28ed5dd6e8b"
+}

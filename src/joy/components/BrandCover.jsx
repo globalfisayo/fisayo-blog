@@ -4,9 +4,15 @@ import { coverGradient } from '@/joy/lib/typeStyles';
 import { SPONSOR_LOCKUP } from '@/joy/config';
 
 // Generated cover for opportunities without an uploaded image: a type-tinted
-// gradient with the opportunity name set large, over the Novola × Fisayo.org
-// partnership strip — so every card looks branded and intentional, never
-// broken. Uploading a real image in Pages CMS replaces this automatically.
+// gradient with a large monogram and the Novola × Fisayo.org partnership
+// strip — so every card looks branded and intentional, never broken. The
+// card body carries the title (once); uploading a real image in Pages CMS
+// replaces this automatically.
+const monogram = (title) => {
+  const m = (title || '').normalize('NFKD').match(/[A-Za-z0-9]/);
+  return m ? m[0].toUpperCase() : '★';
+};
+
 const BrandCover = ({ opp }) => {
   const primaryType = (opp.types && opp.types[0]) || 'Opportunity';
 
@@ -25,15 +31,16 @@ const BrandCover = ({ opp }) => {
             'radial-gradient(circle at 82% 15%, rgba(255,255,255,0.55) 0, transparent 32%), radial-gradient(circle at 12% 85%, rgba(255,255,255,0.35) 0, transparent 42%)',
         }}
       />
-      <div className="relative flex-1 flex flex-col justify-center px-6 py-4 min-h-0">
-        <span className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white/80 mb-1.5">
+      <div className="relative flex-1 flex items-center justify-between px-6 py-3 min-h-0 overflow-hidden">
+        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/90 [writing-mode:vertical-rl] rotate-180 self-stretch flex items-center max-h-full overflow-hidden whitespace-nowrap text-ellipsis">
           {primaryType}
         </span>
         <span
-          className="font-bold text-white leading-snug line-clamp-3 text-lg"
-          style={{ fontFamily: 'Outfit, sans-serif', textWrap: 'balance' }}
+          aria-hidden="true"
+          className="font-extrabold text-white/25 leading-none select-none"
+          style={{ fontFamily: 'Outfit, sans-serif', fontSize: 'clamp(5rem, 9vw, 7.5rem)' }}
         >
-          {opp.title}
+          {monogram(opp.title)}
         </span>
       </div>
       {/* partnership strip — the Novola × Fisayo.org lockup from the Notion cards */}

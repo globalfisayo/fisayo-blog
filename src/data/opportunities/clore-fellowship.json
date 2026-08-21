@@ -1,0 +1,21 @@
+{
+  "title": "Clore Fellowship",
+  "slug": "clore-fellowship",
+  "applyUrl": "https://www.cloreleadership.org/programme/clore-fellowship/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-01-27",
+  "deadline": "2026-02-05",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f5f2057607c80ca9b7ecdb2eaec65d4"
+}

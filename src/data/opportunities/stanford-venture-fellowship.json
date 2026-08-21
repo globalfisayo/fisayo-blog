@@ -1,0 +1,21 @@
+{
+  "title": "Stanford Venture Fellowship",
+  "slug": "stanford-venture-fellowship",
+  "applyUrl": "https://www.svfellow.com/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-03-23",
+  "deadline": "2026-04-04",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/32cf2057607c80ad826cc72bfe548a2c"
+}

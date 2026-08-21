@@ -49,7 +49,8 @@ const OpportunityCard = ({ opp, delay = 0 }) => {
           className="relative block aspect-[16/9] w-full overflow-hidden bg-muted focus:outline-none"
           aria-label={`${opp.title} — open the application page`}
         >
-          <div className="h-full w-full transition-transform duration-500 group-hover:scale-[1.03]">
+          {/* absolute layer: cover content can never stretch the 16:9 box */}
+          <div className="absolute inset-0 transition-transform duration-500 group-hover:scale-[1.03]">
             {opp.coverSrc ? (
               <img src={opp.coverSrc} alt={opp.title} loading="lazy" className="h-full w-full object-cover" />
             ) : (

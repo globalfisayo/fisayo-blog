@@ -73,7 +73,9 @@ function JoyApp() {
       </section>
 
       {/* Universe */}
-      <main id="universe" className="container-custom flex-1 py-8 md:py-10">
+      {/* min-w-0: as a flex item, main must not inherit the nowrap filter
+          pills' intrinsic width as its minimum — that blows out mobile. */}
+      <main id="universe" className="container-custom w-full min-w-0 flex-1 py-8 md:py-10">
         <FilterBar
           types={types}
           type={type}

@@ -1,0 +1,21 @@
+{
+  "title": "COMMONWEALTH FELLOWSHIPS",
+  "slug": "commonwealth-fellowships",
+  "applyUrl": "https://cscuk.fcdo.gov.uk/scholarships/commonwealth-fellowships-information-for-candidates/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "open",
+  "dateAdded": "2026-08-20",
+  "deadline": "2026-08-25",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/3c2f2057607c80f5a606cdbdc4013a19"
+}

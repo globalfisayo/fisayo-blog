@@ -1,0 +1,21 @@
+{
+  "title": "Einstein Fellowship in Germany",
+  "slug": "einstein-fellowship-in-germany",
+  "applyUrl": "https://www.einsteinforum.de/en/about/fellowship/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-04-08",
+  "deadline": "2026-05-15",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/33cf2057607c8013b83ed88c1086aa44"
+}

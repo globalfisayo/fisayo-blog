@@ -1,0 +1,21 @@
+{
+  "title": "Camelback Fellowship",
+  "slug": "camelback-fellowship",
+  "applyUrl": "https://www.camelbackventures.org/apply/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-11",
+  "deadline": "2026-03-02",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/304f2057607c80659c48d2ac4ebbf432"
+}

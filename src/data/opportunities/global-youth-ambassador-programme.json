@@ -1,0 +1,21 @@
+{
+  "title": "Global Youth Ambassador Programme 🌐",
+  "slug": "global-youth-ambassador-programme",
+  "applyUrl": "https://theirworld.org/gya-application/",
+  "types": [
+    "Development Program"
+  ],
+  "status": "open",
+  "dateAdded": "2026-08-20",
+  "deadline": null,
+  "deadlineNote": "Check link for deadline",
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/3c2f2057607c804f830cf3c12aebfef9"
+}

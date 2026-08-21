@@ -1,0 +1,21 @@
+{
+  "title": "African Union (AU) Internship Program",
+  "slug": "african-union-au-internship-program",
+  "applyUrl": "https://au.int/en/internships",
+  "types": [
+    "Internship"
+  ],
+  "status": "open",
+  "dateAdded": "2026-01-19",
+  "deadline": null,
+  "deadlineNote": "Check link for deadline",
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2edf2057607c8022a700eff066e5fab3"
+}

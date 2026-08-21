@@ -1,0 +1,21 @@
+{
+  "title": "Cora Weiss Fellowship",
+  "slug": "cora-weiss-fellowship",
+  "applyUrl": "https://docs.google.com/forms/d/e/1FAIpQLSe5orAyGlo_GTiOKOBA7hV7JhmL0wsRiY1T30X8kan2Gyfwaw/viewform",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-09",
+  "deadline": "2026-02-15",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/302f2057607c80188b60c3f9343ccaf2"
+}

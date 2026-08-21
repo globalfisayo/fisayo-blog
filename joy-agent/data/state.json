@@ -1,0 +1,8 @@
+{
+  "activeList": "companies-v1.json",
+  "cursor": 0,
+  "note": "cursor = listOrder of the last company researched. Daily run takes the next batchSize companies after cursor, wrapping to 1 after the end of the list.",
+  "lastRunDate": null,
+  "companiesVisited": {},
+  "cycle": 1
+}

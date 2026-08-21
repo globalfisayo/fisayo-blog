@@ -1,0 +1,4 @@
+{
+  "note": "Registry of every listing ever surfaced, keyed by normalized listing URL. Prevents re-surfacing the same job into review on later visits.",
+  "listings": {}
+}

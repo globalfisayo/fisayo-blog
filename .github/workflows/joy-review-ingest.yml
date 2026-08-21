@@ -1,0 +1,58 @@
+name: Joy review ingest (publish approvals, log rejections)
+
+# Fires when someone saves a verdict in Pages CMS (the Joy Review Queue
+# collection commits to joy-agent/review/queue/). Approvals become live
+# opportunity files and trigger a deploy; rejections (with a reason) land in
+# the Human Feedback Database the Joy Agent learns from.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'joy-agent/review/queue/**'
+  workflow_dispatch:
+
+concurrency:
+  group: joy-review-ingest
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    outputs:
+      published: ${{ steps.run.outputs.published }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Ingest verdicts
+        id: run
+        run: node scripts/joy-ingest-verdicts.mjs
+
+      - name: Commit results
+        run: |
+          git config user.name "joy-agent-ingest[bot]"
+          git config user.email "noreply@fisayo.org"
+          git add joy-agent/ src/data/opportunities/
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+          else
+            git commit -m "Joy review ingest: publish approvals, log rejections"
+            git push origin main
+          fi
+
+  # Approvals must go live without waiting for the next daily run. Pushes
+  # made with GITHUB_TOKEN do not trigger the push-based deploy workflow, so
+  # call it explicitly.
+  deploy:
+    needs: ingest
+    if: needs.ingest.outputs.published != '0' && needs.ingest.outputs.published != ''
+    uses: ./.github/workflows/deploy.yml
+    secrets: inherit

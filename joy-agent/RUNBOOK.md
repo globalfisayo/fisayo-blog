@@ -39,23 +39,24 @@ publish to fisayo.org/opportunities.
 
 ## Step 1 — Ingest human verdicts (the human-in-the-loop quality filter)
 
-For every file in `review/pending/*.md`:
+Humans review in **Pages CMS → Joy Review Queue**, which edits the JSON
+files in `review/queue/`. A GitHub workflow
+(`.github/workflows/joy-review-ingest.yml`) normally processes verdicts
+within minutes of each save; this step is the daily safety net plus the
+learning work only an agent can do:
 
-1. Scan each opportunity block (headed `### JOY-…`) for its
-   `**Verdict:** …` line.
-2. **`APPROVE`** → find the listing's full record in that run's
-   `runs/<date>/checked-findings.json` (match by the JOY id) and append it
-   as one line to `approved/universe-queue.jsonl`, adding
-   `"humanVerdict": "approved"` and `"humanReviewedOn": "<runDate>"`.
-   Update its entry in `data/seen-listings.json` to `"status": "approved"`.
-3. **`REJECT — <reason>`** → append to `feedback/feedback-log.jsonl`:
-   `{"date": runDate, "id": "<JOY id>", "company": …, "title": …,
-   "reason": "<the human's reason verbatim>", "source": "human"}`.
-   Update seen-listings status to `"rejected"`.
-4. **`PENDING`** → leave in place. If the file is older than 14 days, note
-   the backlog in today's run report.
-5. When a file has no PENDING verdicts left, `git mv` it to
-   `review/processed/`.
+1. Run `node scripts/joy-ingest-verdicts.mjs` — it deterministically
+   publishes any un-processed approvals (site file + universe-queue ledger
+   line), logs reasoned rejections to `feedback/feedback-log.jsonl`, moves
+   processed entries to `review/processed/<YYYY-MM>/`, and leaves
+   pending / reason-less entries in place. Read its JSON summary.
+2. For each processed verdict, update the listing's entry in
+   `data/seen-listings.json` (`"status": "approved"` / `"rejected"`).
+3. Rejections marked `awaitingReason` (verdict reject, empty reason): note
+   them in the run report — the reason is the training data, so they stay
+   queued until a human adds one.
+4. Queue entries pending for more than 14 days: note the backlog in the
+   run report.
 
 ## Step 1b — Publish approved opportunities to the site (the Universe Agent step)
 
@@ -165,14 +166,20 @@ none — paste these inline, they are small).
    `{"date": runDate, "company": …, "title": …, "reason": failReason + ": "
    + failDetail, "source": "checker"}`. (Duplicates: skip logging — they are
    working-as-intended, not lessons.)
-2. **Passed listings** → these go to human review:
-   - Cap the day's queue at `config.reviewQueueCap` in the same priority
-     order as Step 4. Anything over the cap stays in checked-findings
-     (it is not lost) and is counted as overflow in the run report.
-   - Write `review/pending/<runDate>.md` in the format defined in
-     `review/README.md`, one block per listing, each ending
-     `**Verdict:** PENDING`.
-   - If zero listings passed, write no review file — note it in the report.
+2. **Passed listings** → these go to human review in the CMS queue:
+   - Cap the day's additions at `config.reviewQueueCap` in the same
+     priority order as Step 4. Anything over the cap stays in
+     checked-findings (it is not lost) and is counted as overflow in the
+     run report.
+   - Write one `review/queue/<joyId>.json` per listing, in the exact shape
+     the Pages CMS "Joy Review Queue" collection defines (see an existing
+     queue or processed file as the template): `verdict: "pending"`,
+     `rejectReason: ""`, then title, joyId, company, level, function,
+     audience (comma-joined string), location ("City, Country"), applyUrl,
+     listingUrl, visaSponsorship, deadline, postedDate, foundOn (runDate),
+     and `checkerNotes` (verdict + warnings + a ≤420-char condensed
+     checker excerpt).
+   - If zero listings passed, write nothing — note it in the report.
 3. **Register every surfaced listing** (passed AND failed) in
    `data/seen-listings.json`, keyed by normalized listing URL (lowercase
    host, strip tracking params/fragments), as `{company, title, location,

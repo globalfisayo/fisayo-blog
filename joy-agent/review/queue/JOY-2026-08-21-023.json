@@ -1,0 +1,18 @@
+{
+  "verdict": "pending",
+  "rejectReason": "",
+  "title": "Associate Java Developer",
+  "joyId": "JOY-2026-08-21-023",
+  "company": "Booking Holdings",
+  "level": "Associate",
+  "function": "Technology & Engineering",
+  "audience": "Young professionals",
+  "location": "Toronto, Canada",
+  "applyUrl": "https://careers.priceline.com/job/r5644/",
+  "listingUrl": "https://careers.priceline.com/job/r5644/",
+  "visaSponsorship": "Not Mentioned",
+  "deadline": null,
+  "postedDate": null,
+  "foundOn": "2026-08-21",
+  "checkerNotes": "PASS — warnings: unverified-liveness (network-restricted), description-unread. R5644 corroborated by Jobs.ca, Indeed, jobrapido and two Ladders mirrors with matching title/city/salary and no closure signals; a small site:careers.priceline.com index sample did not surface R5644 itself but confirms the domain's live r-number pattern and shows a distinct sibling req R5696 (Associate Java Full-Stack Developer, big-data stack) — verify R5644 is still open on direct fetch."
+}

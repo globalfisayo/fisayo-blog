@@ -1,9 +1,9 @@
 // Opportunity Universe page settings — safe for non-developers to edit.
 
-// Where the "Be the first to know" buttons send people (the newsletter/alerts
-// signup — e.g. a Kit form or landing page URL). Update this one line to
-// change every button on the page.
-export const SUBSCRIBE_URL = 'https://fisayo.org/#newsletter';
+// Where the "Be the first to know" buttons send people — the Kit signup form
+// ("Want Global Opportunities?"). Update this one line to change every button
+// on the page.
+export const SUBSCRIBE_URL = 'https://fisayo.kit.com/f6f64a9f48';
 
 // Partnership lockup shown on cards without their own cover image.
 export const SPONSOR_LOCKUP = ['Novola Charity Foundation', 'Fisayo.org'];

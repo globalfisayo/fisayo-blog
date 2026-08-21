@@ -42,8 +42,10 @@ checks out this branch and follows [`RUNBOOK.md`](RUNBOOK.md):
    of every finding: dead links, seniority creep, wrong countries,
    non-prestige roles, unsupported visa claims, duplicates against
    everything ever surfaced (`data/seen-listings.json`).
-5. **Queue for review** — survivors land in `review/pending/<date>.md`
-   ending in `**Verdict:** PENDING`, capped at 25/day, sponsorship-first.
+5. **Queue for review** — survivors land in `review/queue/` (one JSON per
+   listing, capped at 25/day, sponsorship-first), which your team reviews
+   in Pages CMS; a deterministic workflow publishes approvals live within
+   minutes and logs reasoned rejections to the feedback database.
 6. **Commit + push** to this branch — the site only deploys from `main`,
    so the pipeline never touches the live blog.
 
@@ -68,9 +70,10 @@ checks out this branch and follows [`RUNBOOK.md`](RUNBOOK.md):
 
 ## Operating it
 
-- **Review the day's finds:** open `review/pending/<date>.md` on this
-  branch, flip `PENDING` → `APPROVE` or `REJECT — reason`. That's the whole
-  human workflow. (Details in `review/README.md`.)
+- **Review the day's finds:** Pages CMS → **Joy Review Queue** → set each
+  entry's verdict to `approve` (live on fisayo.org/joy within ~2 minutes)
+  or `reject` + a reason (which trains the agent). That's the whole human
+  workflow. (Details in `review/README.md`.)
 - **Change the pace:** edit `batchSize` / `reviewQueueCap` in
   `config.json` — takes effect next run.
 - **Expand the universe:** `data/companies-full.json` holds 252 more

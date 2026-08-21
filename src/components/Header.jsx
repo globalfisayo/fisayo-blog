@@ -13,7 +13,7 @@ const MAIN_SITE = [
   { name: 'Home', href: 'https://fisayo.org/' },
   { name: 'My Story', href: 'https://fisayo.org/mystory/' },
   { name: 'Global Academy', href: 'https://fisayo.org/global-academy/' },
-  { name: 'Opportunities', href: 'https://fisayo.org/opportunities/' },
+  { name: 'Opportunities', href: 'https://fisayo.org/joy/' },
   { name: 'Investor Memos', href: 'https://fisayo.org/memos/' },
   { name: 'Speaking', href: 'https://fisayo.org/speaking/' },
   { name: 'Partners', href: 'https://fisayo.org/partners/' },
@@ -61,7 +61,7 @@ const Header = () => {
 
         <div className="hidden lg:block">
           <Button asChild>
-            <a href="https://fisayo.org/opportunities/">Opportunity Universe</a>
+            <a href="https://fisayo.org/joy/">Opportunity Universe</a>
           </Button>
         </div>
 
@@ -92,7 +92,7 @@ const Header = () => {
                 </a>
               ))}
               <Button asChild className="mt-4">
-                <a href="https://fisayo.org/opportunities/">Opportunity Universe</a>
+                <a href="https://fisayo.org/joy/">Opportunity Universe</a>
               </Button>
             </div>
           </SheetContent>

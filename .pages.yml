@@ -115,6 +115,77 @@ content:
         type: string
         description: 'Original Notion URL or JOY id. For tracking; not shown on the page.'
 
+  - name: joyreview
+    label: Joy Review Queue
+    type: collection
+    path: joy-agent/review/queue
+    format: json
+    filename: '{fields.joyId}.json'
+    view:
+      fields: [title, company, verdict, visaSponsorship, foundOn]
+      primary: title
+      sort: [foundOn, title]
+      default:
+        search: ''
+        sort: foundOn
+        order: desc
+    fields:
+      - name: verdict
+        label: 'YOUR VERDICT'
+        type: select
+        default: pending
+        options:
+          values: [pending, approve, reject]
+        description: 'approve → goes LIVE on fisayo.org/joy within ~2 minutes. reject → removed from the queue and the Joy Agent learns from your reason below.'
+      - name: rejectReason
+        label: 'Why rejected? (required when rejecting)'
+        type: text
+        description: 'Be specific — this exact sentence goes into the Joy Agent''s feedback database and trains its judgment. E.g. "This is a sales quota role dressed up as a graduate scheme." A rejection WITHOUT a reason stays in the queue.'
+      - name: title
+        label: Opportunity
+        type: string
+        required: true
+      - name: joyId
+        label: Joy ID
+        type: string
+        required: true
+      - name: company
+        label: Company
+        type: string
+      - name: level
+        label: Level
+        type: string
+      - name: function
+        label: Function
+        type: string
+      - name: audience
+        label: Audience fit
+        type: string
+      - name: location
+        label: Location
+        type: string
+      - name: applyUrl
+        label: Apply link (open it to sanity-check before approving)
+        type: string
+      - name: listingUrl
+        label: Listing link
+        type: string
+      - name: visaSponsorship
+        label: Visa sponsorship
+        type: string
+      - name: deadline
+        label: Deadline
+        type: string
+      - name: postedDate
+        label: Posted
+        type: string
+      - name: foundOn
+        label: Found on
+        type: date
+      - name: checkerNotes
+        label: Checker Agent's verification notes
+        type: text
+
   - name: posts
     label: Blog Posts
     type: collection

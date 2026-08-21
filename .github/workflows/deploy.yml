@@ -20,6 +20,9 @@ on:
       - 'postcss.config.js'
       - '.github/workflows/deploy.yml'
   workflow_dispatch:
+  # Lets other workflows (joy-review-ingest.yml) trigger a deploy after they
+  # commit newly approved opportunities to main.
+  workflow_call:
 
 # Never let two deploys interleave their upload/swap steps.
 concurrency:
@@ -36,7 +39,11 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
+      # Always deploy the latest main — when called from joy-review-ingest,
+      # the triggering SHA predates the commit that ingest just pushed.
       - uses: actions/checkout@v4
+        with:
+          ref: main
 
       - uses: actions/setup-node@v4
         with:
@@ -85,6 +92,15 @@ jobs:
               if [ -d joy ]; then mv joy joy.old; fi
               mv joy.new joy
               rm -rf joy.old ~/joy-deploy.tar.gz
+
+              # The old Notion-backed Opportunities page is retired: a
+              # physical /opportunities/ directory (which takes precedence
+              # over the WordPress page, same as /blog/ and /joy/) 301s
+              # every visitor and inbound link to the new universe. Remove
+              # this block and the directory to hand the URL back to
+              # WordPress.
+              mkdir -p opportunities
+              printf "RewriteEngine On\nRewriteRule ^ https://fisayo.org/joy/ [R=301,L]\n" > opportunities/.htaccess
 
               # The WordPress nav dropdown ("Latest Insights") is rendered from
               # blog/posts-index.json by a mu-plugin, and WordPress pages are

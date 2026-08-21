@@ -15,13 +15,17 @@ publish to fisayo.org/opportunities.
 
 ## Step 0 — Setup
 
-1. Work on branch **`claude/joy-agent-visa-jobs-y06ee0`** (the Joy Agent
-   working branch):
-   - `git fetch origin claude/joy-agent-visa-jobs-y06ee0` — if it exists,
-     check it out and `git pull origin claude/joy-agent-visa-jobs-y06ee0`.
-   - If it no longer exists on origin (e.g. deleted after a merge),
-     recreate it from the default branch: `git checkout -B
-     claude/joy-agent-visa-jobs-y06ee0 origin/main`.
+1. Decide the working branch:
+   - `git fetch origin main` and check whether `origin/main` contains
+     `joy-agent/RUNBOOK.md`. **If yes, the pipeline has been merged: work
+     directly on `main`** (`git checkout main && git pull origin main`) —
+     this is the steady state, where publishing an opportunity file deploys
+     the live site automatically.
+   - If `main` does NOT yet have `joy-agent/` (pre-merge pilot phase), work
+     on **`claude/joy-agent-visa-jobs-y06ee0`**: fetch and check it out
+     (pull latest), or recreate it from `origin/main`… which in that case
+     won't have `joy-agent/` either — then stop and report instead of
+     improvising.
    - If `joy-agent/` is missing on the checked-out branch, stop and report —
      do not improvise.
 2. Read `config.json` (batch size, caps) and `data/state.json` (cursor).
@@ -52,6 +56,46 @@ For every file in `review/pending/*.md`:
    the backlog in today's run report.
 5. When a file has no PENDING verdicts left, `git mv` it to
    `review/processed/`.
+
+## Step 1b — Publish approved opportunities to the site (the Universe Agent step)
+
+The site's Opportunity Universe (fisayo.org/joy) is a static app that reads
+one JSON file per opportunity from `src/data/opportunities/` — written by
+Pages CMS (humans) and by this step (the agent). Publishing = writing the
+file; the deploy workflow does the rest when the commit lands on `main`.
+
+For every line in `approved/universe-queue.jsonl` that has no `publishedOn`
+field (newly approved this run, or still unpublished from earlier):
+
+1. Map the record to the site schema and write
+   `src/data/opportunities/joy-<slug>.json`, where `<slug>` is a slugified
+   `<company>-<title>` (lowercase, hyphens, ≤80 chars):
+   - `title` = listing title · `applyUrl` = applicationUrl · `types` =
+     `["Job"]`, plus `"Internship"` when level is Internship, or
+     `"Graduate Program"` when level is Graduate Scheme
+   - `status` = "open" · `dateAdded` = today · `deadline` = deadline or
+     null · `deadlineNote` = "Check link for deadline" when no deadline
+   - `description` = one plain sentence from level/function/audience (e.g.
+     "Entry-level Technology & Engineering role for university and masters
+     graduates.")
+   - `company`, `location` ("City, Country"), `visaSponsorship` (=
+     visaSponsorshipMentioned) · `coverImage`/`coverImageUrl` = null (the
+     branded cover renders) · `sponsors` = ["Novola Charity Foundation",
+     "Fisayo.org"] · `source` = "joy-agent" · `sourceRef` = joyId
+2. If the target file already exists, do NOT overwrite it (a human may have
+   edited it in Pages CMS) — note it in the run report and mark the queue
+   line published anyway.
+3. Rewrite the queue line with `"publishedOn": "<runDate>"`.
+
+Then **site maintenance**: scan all files in `src/data/opportunities/` with
+`"status": "open"` and a `deadline` strictly before today → set `status` to
+`"closed"`. Change nothing else in those files (they may carry human
+edits). The frontend already displays passed-deadline items as closed; this
+keeps the data truthful too.
+
+Pre-merge note: while working on the pilot branch, published files ride the
+branch and go live when Fisayo merges to `main`; count them in the report
+as "published (awaiting merge)".
 
 Then **update the lessons** (the "Joy Agent Learns from Database" loop):
 re-read `feedback/feedback-log.jsonl`. If new human rejections reveal a
@@ -146,12 +190,17 @@ none — paste these inline, they are small).
 
 ## Step 6 — Commit and push
 
-1. `git add joy-agent/` only. Never touch files outside `joy-agent/`.
+1. `git add joy-agent/ src/data/opportunities/` — those two paths and
+   nothing else. Never touch other site code.
 2. Commit message: `Joy run <runDate>: <batch first>–<batch last>, N
-   surfaced, M to review` (+ a second line for verdicts ingested, if any).
-3. `git push -u origin claude/joy-agent-visa-jobs-y06ee0`. On network
-   failure retry up to 4 times with exponential backoff (2s, 4s, 8s, 16s).
-4. Do NOT open a pull request.
+   surfaced, M to review` (+ a second line for verdicts ingested and
+   opportunities published, if any).
+3. `git push -u origin <the working branch from Step 0>` — `main` in the
+   steady state, the pilot branch pre-merge. On network failure retry up
+   to 4 times with exponential backoff (2s, 4s, 8s, 16s).
+4. Do NOT open a pull request. (Pushes to `main` only deploy the site when
+   `src/` changed — the workflow's paths filter skips runs whose commits
+   touch only `joy-agent/`.)
 
 ## Step 7 — Report
 
@@ -166,8 +215,10 @@ branch), and anything needing Fisayo/Hebron's attention.
   valid day.
 - Never let an unverified "Yes" visa flag through — that is the one claim
   our audience will act on most.
-- Stay inside `joy-agent/`; never modify the blog site, never push to
-  `main`, never force-push.
+- Touch only `joy-agent/` and `src/data/opportunities/`; never modify the
+  blog or the joy app's code. Push only to the Step 0 working branch
+  (`main` in the steady state — additive data commits only); never
+  force-push.
 - If the repo state contradicts this runbook (missing files, malformed
   JSON), fix forward only what today's run needs, note it in the run
   report, and continue — or stop and report if the damage is beyond that.

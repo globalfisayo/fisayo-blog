@@ -14,12 +14,12 @@ makes the agent's judgment sharper every week.
   companies-v1.json ──▶ │  JOY FINDER ──▶ CHECKER AGENT ──▶ human review (quality   │ ──▶ approved/
   (200 pilot            │  finds live      re-verifies        filter, in review/)   │     universe-queue.jsonl
    companies,           │  early-career    every link,           │ NO               │         │
-   8/day rotation)      │  listings        level, country,       ▼                  │         ▼
-                        │      ▲           prestige, visa    feedback-log.jsonl     │    Universe Agent
-                        │      │           evidence          (Human Feedback DB)    │    publishes to
-                        │      └── reads lessons.md ◀── distilled from ──┘          │    fisayo.org/opportunities
-                        │        ("Joy Agent Learns from Database")                 │    (Fisayo's side — out of
-                        └───────────────────────────────────────────────────────────┘     scope here)
+   8/day rotation)      │  listings        level, country,       ▼                  │         ▼ UNIVERSE step
+                        │      ▲           prestige, visa    feedback-log.jsonl     │  src/data/opportunities/
+                        │      │           evidence          (Human Feedback DB)    │  joy-<slug>.json → deploy
+                        │      └── reads lessons.md ◀── distilled from ──┘          │  → LIVE at fisayo.org/joy
+                        │        ("Joy Agent Learns from Database")                 │  (humans fix anything via
+                        └───────────────────────────────────────────────────────────┘   Pages CMS)
 ```
 
 ## How it runs
@@ -79,6 +79,10 @@ checks out this branch and follows [`RUNBOOK.md`](RUNBOOK.md):
   alongside `data/source/`.
 - **Pause it:** disable the "Joy Agent — daily opportunity run" Routine in
   claude.ai/code (or ask Claude to). Delete nothing.
-- **Out of scope, by design:** the Universe Agent, the live
-  fisayo.org/opportunities page, and moving the backend off Notion (O2) —
-  this pipeline ends at `approved/universe-queue.jsonl`.
+- **The live site (O2):** approved opportunities are published by the
+  pipeline itself as JSON files in `src/data/opportunities/` and rendered
+  at **fisayo.org/joy** (see `vite.joy.config.js` and `src/joy/`). Humans
+  edit any card — fix an image, correct a deadline, close an entry — in
+  Pages CMS (app.pagescms.org → Opportunities); saving commits and
+  redeploys automatically. The pipeline never overwrites a file that
+  already exists, so human edits always win.

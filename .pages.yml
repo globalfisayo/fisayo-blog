@@ -5,6 +5,116 @@ media:
   output: /blog/uploads
 
 content:
+  - name: opportunities
+    label: Opportunities
+    type: collection
+    path: src/data/opportunities
+    format: json
+    filename: '{fields.slug}.json'
+    view:
+      fields: [title, types, status, dateAdded, deadline]
+      primary: title
+      sort: [dateAdded, title]
+      default:
+        search: ''
+        sort: dateAdded
+        order: desc
+    fields:
+      - name: title
+        label: Opportunity name
+        type: string
+        required: true
+      - name: slug
+        label: URL slug / filename
+        type: string
+        required: true
+        pattern:
+          regex: '^[a-z0-9]+(?:-[a-z0-9]+)*$'
+          message: 'Lowercase letters and numbers only, words separated by hyphens (e.g. chevening-scholarship-2027)'
+        description: 'Becomes the file name. Keep it short and unique.'
+      - name: applyUrl
+        label: Apply link
+        type: string
+        description: 'Where the "Apply now" button sends people — the official application page.'
+      - name: types
+        label: Type(s)
+        type: select
+        list: true
+        options:
+          values:
+            [
+              Job,
+              Internship,
+              Graduate Program,
+              Scholarship,
+              Fellowship,
+              Grant,
+              Conference,
+              Research Program,
+              Funding,
+              Bootcamp,
+              Development Program,
+              Opportunity,
+            ]
+      - name: status
+        label: Status
+        type: select
+        default: open
+        options:
+          values: [open, closed]
+        description: 'Closed opportunities stay on the page, greyed out. Anything with a passed deadline shows as closed automatically.'
+      - name: dateAdded
+        label: Date added
+        type: date
+        required: true
+      - name: deadline
+        label: Deadline
+        type: date
+        description: 'Leave empty for rolling / unknown deadlines and use the note below instead.'
+      - name: deadlineNote
+        label: Deadline note (when no date)
+        type: string
+        description: 'Shown when no deadline date is set — e.g. "Rolling deadline" or "Check link for deadline".'
+      - name: description
+        label: Short description
+        type: text
+        description: 'One or two sentences shown on the card. Optional.'
+      - name: coverImage
+        label: Cover image (upload)
+        type: image
+        description: 'Card image, ideally 1200×675 (16:9), with the Novola × Fisayo.org lockup. Leave empty for the automatic branded cover.'
+      - name: coverImageUrl
+        label: Cover image link (paste a URL)
+        type: string
+        description: 'Optional. Paste a link to an image hosted elsewhere instead of uploading. If set, this wins over the upload.'
+      - name: company
+        label: Company (jobs only)
+        type: string
+        description: 'Optional — shown as a small chip. Filled automatically for Joy Agent finds.'
+      - name: location
+        label: Location (jobs only)
+        type: string
+        description: 'Optional — e.g. "Toronto, Canada" or "Remote".'
+      - name: visaSponsorship
+        label: Visa sponsorship (jobs only)
+        type: select
+        options:
+          values: ['Yes', 'No – Right to Work Required', 'Not Mentioned']
+        description: 'Only mark Yes when the listing explicitly says so. Cards show a "Visa sponsorship" badge for Yes.'
+      - name: sponsors
+        label: Sponsor lockup names
+        type: string
+        list: true
+        description: 'Names shown in the partnership strip on generated covers. Default: Novola Charity Foundation, Fisayo.org.'
+      - name: source
+        label: Source (how this entry was created)
+        type: string
+        description: 'e.g. notion-migration, joy-agent, manual. For tracking; not shown on the page.'
+      - name: sourceRef
+        label: Source reference
+        type: string
+        description: 'Original Notion URL or JOY id. For tracking; not shown on the page.'
+
   - name: posts
     label: Blog Posts
     type: collection

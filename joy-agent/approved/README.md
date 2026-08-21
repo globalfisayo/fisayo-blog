@@ -12,10 +12,12 @@ Every line is one opportunity that has passed all three gates:
    re-checked against the actual page, visa flag audited against page text
 3. **Human reviewer** — explicitly approved in `../review/`
 
-The Universe Agent (Fisayo's side of the flowchart — out of scope for this
-pipeline) consumes lines from this file to update
-fisayo.org/opportunities, then may mark them consumed by adding
-`"publishedOn": "YYYY-MM-DD"` — this pipeline never deletes lines.
+The Universe Agent is now a step of this same pipeline (RUNBOOK Step 1b):
+each daily run converts unpublished lines into site files at
+`src/data/opportunities/joy-<slug>.json` — which is what fisayo.org/joy
+renders — and stamps the line with `"publishedOn": "YYYY-MM-DD"`. Lines are
+never deleted; this file is the permanent ledger of everything the grey box
+has shipped.
 
 ## Record schema (one JSON object per line)
 

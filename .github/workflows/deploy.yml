@@ -1,8 +1,24 @@
-name: Deploy blog to fisayo.org
+name: Deploy blog + opportunity universe to fisayo.org
 
 on:
   push:
     branches: [main]
+    # Skip deploys for commits that only touch the Joy Agent's operational
+    # data (run logs, review queues, state) — the site only changes when
+    # src/, public/, or the build setup changes. Opportunity publishes DO
+    # touch src/data/opportunities/, so they deploy.
+    paths:
+      - 'src/**'
+      - 'public/**'
+      - 'index.html'
+      - 'joy.html'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'vite.config.js'
+      - 'vite.joy.config.js'
+      - 'tailwind.config.js'
+      - 'postcss.config.js'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 # Never let two deploys interleave their upload/swap steps.
@@ -13,6 +29,8 @@ concurrency:
 env:
   # The blog is served from https://fisayo.org/blog/ — assets live under /blog/.
   VITE_BASE: /blog/
+  # The Opportunity Universe is served from https://fisayo.org/joy/.
+  VITE_JOY_BASE: /joy/
 
 jobs:
   build-and-deploy:
@@ -27,6 +45,7 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      - run: npm run build:joy
 
       - name: Deploy to Hostinger over SSH
         env:
@@ -37,16 +56,20 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
 
           tar -czf blog.tar.gz -C dist .
+          tar -czf joy.tar.gz -C dist-joy .
 
           scp -P 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new \
             blog.tar.gz u639443301@82.29.189.52:~/blog-deploy.tar.gz
+          scp -P 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new \
+            joy.tar.gz u639443301@82.29.189.52:~/joy-deploy.tar.gz
 
-          # Unpack to a staging dir, then swap it in — visitors never see a
-          # half-written /blog/ directory.
+          # Unpack each app to a staging dir, then swap it in — visitors never
+          # see a half-written /blog/ or /joy/ directory.
           ssh -p 65002 -i ~/.ssh/deploy_key -o StrictHostKeyChecking=accept-new \
             u639443301@82.29.189.52 '
               set -e
               cd ~/domains/fisayo.org/public_html
+
               rm -rf blog.new
               mkdir blog.new
               tar -xzf ~/blog-deploy.tar.gz -C blog.new
@@ -55,10 +78,18 @@ jobs:
               mv blog.new blog
               rm -rf blog.old ~/blog-deploy.tar.gz
 
+              rm -rf joy.new
+              mkdir joy.new
+              tar -xzf ~/joy-deploy.tar.gz -C joy.new
+              rm -rf joy.old
+              if [ -d joy ]; then mv joy joy.old; fi
+              mv joy.new joy
+              rm -rf joy.old ~/joy-deploy.tar.gz
+
               # The WordPress nav dropdown ("Latest Insights") is rendered from
               # blog/posts-index.json by a mu-plugin, and WordPress pages are
               # cached by LiteSpeed for up to 7 days. Without this purge the
-              # main site keeps showing the previous newest post after a deploy.
+              # main site keeps showing stale content after a deploy.
               cd ~/domains/fisayo.org/public_html
               wp litespeed-purge all || echo "cache purge failed, continuing"
             '

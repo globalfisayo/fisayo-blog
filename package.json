@@ -7,6 +7,9 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview --port 3000",
+    "dev:joy": "vite --config vite.joy.config.js --port 3001 --open /joy.html",
+    "build:joy": "vite build --config vite.joy.config.js",
+    "preview:joy": "vite preview --config vite.joy.config.js --port 3001",
     "lint": "eslint . --quiet"
   },
   "dependencies": {

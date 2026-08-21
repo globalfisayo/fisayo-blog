@@ -26,6 +26,12 @@ publish to fisayo.org/opportunities.
      do not improvise.
 2. Read `config.json` (batch size, caps) and `data/state.json` (cursor).
 3. Today's date in YYYY-MM-DD is `runDate` throughout.
+4. **Network mode check:** WebFetch one well-known URL (e.g.
+   `https://example.com`). If it comes back EGRESS_BLOCKED / proxy 403, the
+   environment blocks outbound browsing: finders and checkers will operate
+   in restricted-network mode (their prompts explain it — search-only,
+   `descriptionRead: false`, no "Yes" visa flags). Say so in the run report
+   and the final summary; the pipeline still runs.
 
 ## Step 1 — Ingest human verdicts (the human-in-the-loop quality filter)
 
@@ -73,33 +79,40 @@ For each company in the batch, dispatch one research subagent
 prompt: instruct it to read `joy-agent/prompts/joy-finder.md` and execute
 the section between PROMPT BEGINS/ENDS with that company's inputs
 (`name`, `linkedinUrl`, `careersPageUrl` from `data/companies-v1.json`),
-`runDate`, and the current `feedback/lessons.md` as `{{lessons}}`. The
-agent's final message must be only the output JSON.
+`runDate`, and the current `feedback/lessons.md` as `{{lessons}}`. If
+`state.json` has a previous visit note for the company
+(`companiesVisited[id].note` — cycle timing, where they post, sponsorship
+posture), include it as extra context. The agent's final message must be
+only the output JSON.
 
-- Parse each agent's JSON. If an agent returns unparseable output, retry it
-  once; if it fails again, record the company as `"error"` in the run data
-  and move on.
-- Save the combined results as `runs/<runDate>/raw-findings.json`:
-  `{"runDate": …, "batch": [company ids], "findings": [per-company JSON…],
-  "errors": [{company, note}]}`.
+- Parse each agent's JSON (strip any stray prose around it). If an agent
+  returns unparseable output, retry it once; if it fails again, record the
+  company as `"error"` in the run data and move on.
+- Save each company's result as `runs/<runDate>/raw/<company-id>.json`,
+  plus `runs/<runDate>/batch.json`: `{"runDate": …, "batch": [company
+  ids], "errors": [{company, note}]}`.
 
 ## Step 4 — Checker (Checker Agent REVIEWS Relevant Opportunities)
 
 For each company **with at least one listing**, dispatch one checker
 subagent (`general-purpose`), all in parallel in a single message. Each
 checker's prompt: instruct it to read `joy-agent/prompts/checker.md` and
-execute the PROMPT section with `{{findingsJson}}` = that company's raw
-finding, and `{{seenListings}}` = that company's entries from
-`data/seen-listings.json` (each as `{url, title, location}`; `[]` if none).
+execute the PROMPT section with `{{findingsJson}}` = the contents of
+`runs/<runDate>/raw/<company-id>.json` (tell the checker to Read that file
+rather than pasting it), and `{{seenListings}}` = that company's entries
+from `data/seen-listings.json` (each as `{url, title, location}`; `[]` if
+none — paste these inline, they are small).
 
-- Parse each checker's JSON; same retry-once rule.
+- Parse each checker's JSON; same retry-once rule. Save it as
+  `runs/<runDate>/checked/<company-id>.json`.
 - Assign each **passed** listing a stable id: `JOY-<runDate>-NNN` (NNN =
   001, 002, … in priority order across the whole run: visa "Yes" first,
   then "Not Mentioned" by most recent posting, "No – Right to Work
-  Required" last).
-- Save `runs/<runDate>/checked-findings.json`:
-  `{"runDate": …, "companies": [per-company checker JSON, with "joyId"
-  added to each passed listing]}`.
+  Required" last), recorded in a `joyId` field in the checked file.
+- `runs/<runDate>/checked-findings.json` = a small index:
+  `{"runDate": …, "companies": {"<id>": {"passed": n, "failed": n,
+  "file": "checked/<id>.json"}}}` — verdict ingestion (Step 1) follows the
+  index to the per-company files.
 
 ## Step 5 — Route the results
 

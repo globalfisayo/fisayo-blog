@@ -108,6 +108,32 @@ Budget your fetching: at most ~2 fetches per listing plus 1 repair search.
 If the findings list is long, verify in the finder's given order (it is
 already priority-ordered).
 
+## Restricted-network mode
+
+Some environments block ALL direct page fetches (WebFetch/curl return
+EGRESS_BLOCKED / proxy 403) while web search still works. Detect this with
+one test fetch of the first listing URL; if the block is environment-wide,
+switch modes rather than failing everything as `unverifiable`:
+
+- **Liveness** becomes corroboration-based: search the exact URL, req ID,
+  and `"<title>" "<company>"`. Currently indexed on the company's own
+  domain, or corroborated by a second source, with no closure signals
+  ("no longer accepting", "position filled", a program start date already
+  passed) → treat as live **with the mandatory warning
+  `unverified-liveness (network-restricted)`**. No index presence at all, or
+  closure signals → `fail` (`dead-link` / `unverifiable`).
+- **Visa audit** tightens: with no page read, `"Yes"` is never allowed —
+  downgrade any unquoted "Yes" to `"Not Mentioned"`. Sponsorship language
+  seen only in search snippets or aggregator mirrors goes into the listing's
+  `notes` as `UNVERIFIED: …`, never into `visaEvidence`. An explicit
+  no-sponsorship line in a snippet of the company's own listing page may set
+  `"No – Right to Work Required"` with the snippet quoted in `notes`.
+- **Level/country/prestige** checks run on snippet evidence; where evidence
+  is thin, keep the listing but add warning `description-unread`.
+- Every listing passed in this mode carries `description-unread` in its
+  warnings so the review digest shows the human exactly what was not read.
+- Note the mode prominently in `checkerNotes`.
+
 ## Output format
 
 Return ONLY a JSON object (no prose around it):

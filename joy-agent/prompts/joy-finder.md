@@ -47,6 +47,18 @@ they override your own instincts when they conflict:
   page as a normal outcome: note it and lean on the careers page and web
   search instead. Never hammer a host that is refusing you — two attempts per
   URL maximum, then move on.
+- **Restricted-network mode:** if EVERY direct fetch is refused
+  (EGRESS_BLOCKED / proxy 403 on multiple unrelated hosts), the environment
+  blocks outbound browsing entirely. Don't keep fetching — pivot to
+  site-scoped web searches of the company's own job domains, which are
+  search-indexed and high-yield: `site:careers.[company].com intern OR
+  graduate OR "entry level" 2026 2027`, and the same against their ATS board
+  (`myworkdayjobs.com`, `job-boards.greenhouse.io/[company]`,
+  `jobs.ashbyhq.com/[company]`, `jobs.lever.co/[company]`…). Record every
+  listing with `descriptionRead: false`, put nothing unverified into
+  `visaEvidence`, and state the mode in `methodsAttempted`. Search snippets
+  often carry req IDs, locations, pay, and eligibility lines — capture them
+  in `notes` marked UNVERIFIED where secondhand.
 - Do not use aggregator sites (Indeed, Glassdoor, ZipRecruiter, Handshake…)
   as sources of record — if a search surfaces one, follow it upstream to the
   company's own posting. Aggregator URLs must never appear in your output.

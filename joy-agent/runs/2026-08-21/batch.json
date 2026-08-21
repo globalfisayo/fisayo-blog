@@ -1,0 +1,8 @@
+{
+  "runDate": "2026-08-21",
+  "runType": "pilot (executed in the build session, not by the scheduled Routine)",
+  "batch": ["booking-holdings", "airbnb", "mastercard", "pepsico", "visa"],
+  "batchListOrders": [1, 2, 3, 4, 5],
+  "networkMode": "restricted (egress proxy blocks all direct page fetches; WebSearch only)",
+  "errors": []
+}

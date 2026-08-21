@@ -1,8 +1,34 @@
 {
   "activeList": "companies-v1.json",
-  "cursor": 0,
+  "cursor": 5,
   "note": "cursor = listOrder of the last company researched. Daily run takes the next batchSize companies after cursor, wrapping to 1 after the end of the list.",
-  "lastRunDate": null,
-  "companiesVisited": {},
-  "cycle": 1
+  "lastRunDate": "2026-08-21",
+  "cycle": 1,
+  "companiesVisited": {
+    "booking-holdings": {
+      "lastVisit": "2026-08-21",
+      "listingsSurfaced": 9,
+      "note": "Holding company — all early-career roles live with brands, each on its own ATS: OpenTable + Agoda on job-boards.greenhouse.io, KAYAK on jobs.ashbyhq.com/kayak, Priceline on careers.priceline.com (Workday), Booking.com on careers.booking.com. OpenTable runs a Toronto internship cluster (CAD $42/hr, hybrid). KAYAK US entry = Associate roles Cambridge/Concord MA; its internships are Kaunas/Berlin (out of geography). Priceline Summer 2027 internship should post in fall 2026 (Norwalk/NYC). Booking.com Compass graduate programme (Manchester) opens applications ~Jan-Feb for a September start — check Jan 2027. Agoda = Bangkok (out). Corporate Norwalk roles were all senior."
+    },
+    "airbnb": {
+      "lastVisit": "2026-08-21",
+      "listingsSurfaced": 3,
+      "note": "Greenhouse ATS: canonical URLs careers.airbnb.com/positions/{gh_jid}/. Tech roles 'US - Remote Eligible' but require residence in a state where Airbnb has an entity. Sponsorship posture (UNVERIFIED, from mirrors): US new-grad SWE reqs say work authorization required, OPT accepted, no sponsorship. Summer 2027 intern cycle expected to open ~Sep 2026 — re-check next visit; 2026 summer intern listings are past application (stale in index). Connect Engineering Apprenticeship (SF, non-traditional backgrounds) opens ~April yearly — strong audience fit. EMEA 2025-vintage intern listings (Dublin/London treasury, finance, legal) worth re-verifying once fetching works. LinkedIn numeric ID still unknown."
+    },
+    "mastercard": {
+      "lastVisit": "2026-08-21",
+      "listingsSurfaced": 9,
+      "note": "All roles on careers.mastercard.com (hubs: /us/en/early-careers, /early-careers/launch, /student-opportunities/). Launch = flagship 18-month global grad program (~850 hires/yr); internships feed it. As of Aug 2026: 2027 cycle live in Australia/NZ (5 Launch reqs) and just opening in US (first Summer 2027 intern req R-286204); UK/Ireland/Canada/US 2027 Launch + intern postings expected Sep-Oct 2026 — re-check then. Johannesburg (Melrose Arch) runs Summer + Winter internships + Launch; an 'Associate Analyst, Account Management' Johannesburg posting was aggregator-only this run — look for the company URL next visit. No sponsorship language observable. LinkedIn numeric ID unconfirmed (3015 cited but unverified)."
+    },
+    "pepsico": {
+      "lastVisit": "2026-08-21",
+      "listingsSurfaced": 10,
+      "note": "Everything on pepsicojobs.com (Phenom). Canada dominates now: Fall 2026 co-op wave (10+ postings, Sep-Dec term) + 2026/2027 New Grad programmes (graduated within past year or graduating within 12 months). US Summer 2027 intern cycle opens ~Aug 25 (2026 cycle opened 2025-08-25) and closes end of October — early September visit should catch the full undergrad/masters wave; US postings historically require US work eligibility (expect No – Right to Work Required once readable). UK: mostly manufacturing/operative now; placement-year postings appear in autumn. Ireland (Cork) + South Africa grad listings were stale 2023-24; SA runs a Graduate Programme with the Kgodiso Fund. Nothing Australia/NZ. LinkedIn numeric ID unknown."
+    },
+    "visa": {
+      "lastVisit": "2026-08-21",
+      "listingsSurfaced": 0,
+      "note": "Between cycles on 2026-08-21 — ~25 early-career REF URLs in the index all belonged to the closed 2025-26 cycle; correctly returned zero rather than stale listings. 2027 cycle imminent: US internship/NCG opens Aug-Sep (80% of successful applicants apply in first 3 weeks); VLA rotational window ~Sep (2026's was Sep 10-15, 2025); London programmes (C&A Intern/Graduate, VLA, People, Govt Affairs) + Belfast placement-student roles post Sep-Nov; CEMEA June-start internships incl. Johannesburg post Jan-Apr. RE-VISIT EARLY-TO-MID SEPTEMBER — high priority. Hubs: corporate.visa.com/en/careers/early-careers.html, corporate.visa.com/en/jobs (SmartRecruiters, URLs = /en/jobs/REF#####X), careers.smartrecruiters.com/Visa/university-recruiting. US posture (mirrors, verify on-page): 'Permanent Authorization to work in the U.S. is a precondition… will not sponsor' — expect No – Right to Work Required for US roles; UK/CEMEA vary."
+    }
+  }
 }

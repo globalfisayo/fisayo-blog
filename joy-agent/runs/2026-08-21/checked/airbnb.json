@@ -1,0 +1,76 @@
+{
+  "company": "AirBnB",
+  "runDate": "2026-08-21",
+  "checked": [
+    {
+      "title": "Software Engineer, Airbnb - New Grad",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [],
+      "listing": {
+        "title": "Software Engineer, Airbnb - New Grad",
+        "level": "New Grad",
+        "function": "Technology & Engineering",
+        "audienceFit": ["University graduates", "Masters graduates"],
+        "location": { "city": null, "country": "United States" },
+        "listingUrl": "https://careers.airbnb.com/positions/7773838/",
+        "applicationUrl": "https://careers.airbnb.com/positions/7773838/",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": "2026-04-30",
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Listing page could not be fetched (all outbound browsing egress-blocked this run) — details assembled from search snippets of careers.airbnb.com, boards.greenhouse.io/airbnb/jobs/7773838 and LinkedIn mirror 4409130289 (which showed posted 2026-04-30). Snippets: for recent Bachelor's/Master's graduates with <1 year full-time experience; US - Remote Eligible. UNVERIFIED secondhand (aggregator mirrors, not the listing itself): 'Work authorization for employment in the United States is required (OPT is accepted) - visa sponsorship is unavailable for this role.' Checker must fetch the listing to confirm liveness, location and the sponsorship clause. CHECKER 2026-08-21 (network-restricted): liveness corroborated — careers.airbnb.com/positions/7773838/ is currently indexed on the company's own domain with matching title, plus independent live mirrors (jobright.ai, hubmub.com, startup.jobs); no closure signals in any snippet. Snippets confirm new-grad band (recent Bachelor's/Master's grads, <1 yr full-time experience) and add preference for San Francisco or Seattle with 3 days/week in office, domestic relocation support offered. Visa flag left at Not Mentioned: the OPT/no-sponsorship line for THIS req appears only on aggregator mirrors; a site:careers.airbnb.com exact-phrase search returned this req among results but its snippet did not display the line (company-domain snippets show that exact line only on intern reqs 7449273/7839237) — insufficient under restricted-mode rules. Posted 113 days before runDate with no deadline → stale-posting; likely an evergreen new-grad req."
+      }
+    },
+    {
+      "title": "iOS Software Engineer, Airbnb - New Grad",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [],
+      "listing": {
+        "title": "iOS Software Engineer, Airbnb - New Grad",
+        "level": "New Grad",
+        "function": "Technology & Engineering",
+        "audienceFit": ["University graduates", "Masters graduates", "Young professionals"],
+        "location": { "city": null, "country": "United States" },
+        "listingUrl": "https://careers.airbnb.com/positions/7859317/",
+        "applicationUrl": "https://careers.airbnb.com/positions/7859317/",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": "2026-06-11",
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Listing page could not be fetched — details from search snippets (careers.airbnb.com posting ~May 2026; LinkedIn mirror 4408023524 posted 2026-06-11, used as postedDate). Snippets: recent graduates only (degree completed May 2023-present, <2 years full-time experience); US - Remote Eligible with preference for San Francisco or Seattle (3 days/week in office); Quality Reputation team. UNVERIFIED secondhand (BeBee/Dice/Simplify mirrors): 'Work authorization for employment in the United States is required (OPT is accepted) - visa sponsorship is unavailable for this role.' Checker must confirm on the listing. CHECKER 2026-08-21 (network-restricted): liveness corroborated — careers.airbnb.com/positions/7859317/?gh_jid=7859317 is currently indexed on the company's own domain with matching title, plus independent live mirrors (BeBee, Dice, Simplify, ApplyBolt) and a LinkedIn recruiter post; no closure signals in any snippet. Snippets confirm new-grad band (one snippet says <1 yr full-time experience; finder's said <2 yrs — either way early-career); mirrors list San Francisco, CA but exact location wording unread, so city left null. Visa flag left at Not Mentioned: the OPT/no-sponsorship line for THIS req appears only on aggregator mirrors, never in a company-domain snippet — insufficient under restricted-mode rules. Posted ~71 days before runDate with no deadline → stale-posting."
+      }
+    },
+    {
+      "title": "Machine Learning Engineer, Relevance and Personalization",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread"],
+      "corrections": [],
+      "listing": {
+        "title": "Machine Learning Engineer, Relevance and Personalization",
+        "level": "Entry-level",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Masters graduates", "Young professionals"],
+        "location": { "city": null, "country": "United States" },
+        "listingUrl": "https://careers.airbnb.com/positions/7708224/",
+        "applicationUrl": "https://careers.airbnb.com/positions/7708224/",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Early-career eligible per snippets: 'new grad Ph.D in ML/AI or 2+ years of industry experience in applied ML/AI with an M.S. or B.S degree' — upper end of the early-career band. US - Remote Eligible ('must live in a state where Airbnb, Inc. has a registered entity'). Page not fetchable this run; posting date unknown (Greenhouse ID 7708224 sits just below the Apr-2026 new-grad req 7773838, and a recent Built In NYC mirror exists, suggesting a 2026 posting) — liveness unverified, checker should confirm. CHECKER 2026-08-21 (network-restricted): liveness corroborated — careers.airbnb.com/positions/7708224/ is currently indexed on the company's own domain with matching title, plus live mirrors (Built In NYC job/9315550, jobright.ai); no closure signals in any snippet. Level check: stated bar (new-grad PhD OR 2+ yrs with M.S./B.S.) sits under the 3-yr too-senior threshold — passes as upper-band early-career; note near-identical Senior (req 7258033) and Senior/Senior-Staff Query-Intelligence (req 8065789) siblings exist — this URL is the non-senior req, do not confuse them. Posted date remains unknown, no deadline stated, so stale-posting not assessable. Visa: no sponsorship language found in any snippet for this req → Not Mentioned stands."
+      }
+    }
+  ],
+  "checkerNotes": "RESTRICTED-NETWORK MODE (confirmed): test WebFetch of the first listingUrl returned EGRESS_BLOCKED from the proxy, matching the finder's report that all outbound fetches are blocked while search works — so per protocol, liveness is corroboration-based, no listing page was read this run, and every pass carries 'unverified-liveness (network-restricted)' + 'description-unread'. All three verdicts need a real page read once egress opens: confirm liveness, exact location wording (Remote Eligible vs SF/Seattle), and the sponsorship clause. Corroboration quality was good: each req (7773838, 7859317, 7708224) is currently indexed on careers.airbnb.com itself with matching title plus 2+ independent live mirrors, zero closure signals. Duplicate check trivial: first run, seenListings empty. Source discipline clean: all URLs are canonical careers.airbnb.com (Greenhouse ATS) — no aggregator sources. Visa audit: finder's 'Not Mentioned' flags were already correct for restricted mode; the 'work authorization required (OPT accepted) — visa sponsorship unavailable' line for these specific reqs is so far only on aggregator mirrors (company-domain snippets show that exact line only on intern reqs 7449273 and 7839237; an exact-phrase site search did return 7773838 without displaying the line — suggestive, not proof), so expect all three to resolve to 'No – Right to Work Required' (OPT-friendly) on a real page read — plan the digest accordingly. Freshness: both new-grad SWE reqs are >45 days old with no deadline (stale-posting), consistent with evergreen reqs; the ML req has no discoverable posted date. Watch-out for future runs: 'Machine Learning Engineer, Relevance and Personalization' has Senior (7258033) and Senior-Staff (8065789) near-twins — match on req ID, not title, to avoid a too-senior slip."
+}

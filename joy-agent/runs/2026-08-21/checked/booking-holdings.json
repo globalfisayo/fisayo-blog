@@ -1,0 +1,218 @@
+{
+  "company": "Booking Holdings",
+  "runDate": "2026-08-21",
+  "checked": [
+    {
+      "title": "Software Engineer Internship - iOS",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [],
+      "listing": {
+        "title": "Software Engineer Internship - iOS",
+        "level": "Internship",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Undergraduate students"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216629002",
+        "applicationUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216629002",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: OpenTable (KAYAK-OpenTable division). 12-week hybrid internship, 2 days/week in downtown Toronto office; CAD $42/hr; for undergrads in CS/Engineering graduating by Spring 2027, iOS/Swift/SwiftUI exposure wanted. Details from search-indexed Greenhouse page; direct fetch blocked by sandbox network, so liveness and visa language need re-verification. Checker (restricted network): Greenhouse page currently indexed with matching title; mirrored on Welcome to the Jungle; req sits in the 8216xxx002 ID block opened around Oct-Nov 2025, so original posting is well over 45 days old."
+      }
+    },
+    {
+      "title": "Software Engineer Internship (Hybrid, Toronto)",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting", "linkedin-fallback-url"],
+      "corrections": [],
+      "listing": {
+        "title": "Software Engineer Internship (Hybrid, Toronto)",
+        "level": "Internship",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Undergraduate students"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://ca.linkedin.com/jobs/view/software-engineer-internship-hybrid-toronto-at-opentable-4316638518",
+        "applicationUrl": "https://ca.linkedin.com/jobs/view/software-engineer-internship-hybrid-toronto-at-opentable-4316638518",
+        "applicationSource": "LinkedIn",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "search-to-linkedin",
+        "notes": "Brand: OpenTable. General (web/backend) counterpart to the iOS internship: 12 weeks, hybrid 2 days/week downtown Toronto, CAD $42/hr, graduating by Spring 2027, JavaScript (Angular/React/Node), HTML/CSS or Java. Lives on OpenTable's Greenhouse board but that specific Greenhouse URL was not search-indexed, so the LinkedIn listing is used as fallback URL per Step 5. Checker (restricted network): exact LinkedIn job ID 4316638518 no longer visible in the search index; the listing itself is corroborated by Glassdoor (jl=1009912806655), Jobs.ca, Built In (7435256) and Welcome to the Jungle mirrors, all matching title/company/rate. Canonical Greenhouse URL still un-indexed (one repair search used; all mirrors are aggregators, ineligible as URL of record) — re-locate the Greenhouse page on direct fetch before publishing. Weakest URL of this batch."
+      }
+    },
+    {
+      "title": "Data Engineer Internship (Hybrid, Toronto)",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [],
+      "listing": {
+        "title": "Data Engineer Internship (Hybrid, Toronto)",
+        "level": "Internship",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Undergraduate students"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216632002",
+        "applicationUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216632002",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: OpenTable. 12-week hybrid internship building ETL/ELT pipelines with Toronto-based data engineers; CAD $42/hr; undergrads in CS/Data Science/Engineering/Math graduating by Spring 2027; Python/SQL. Details from search-indexed Greenhouse page; re-verify liveness on direct fetch. Checker (restricted network): Greenhouse page currently indexed with matching title; Built In Toronto mirror (7435257) shows it as actively hiring with a repost bump 5 days before run date, but the req belongs to the fall-2025 8216xxx002 ID block, hence stale-posting."
+      }
+    },
+    {
+      "title": "Product Management Internship (Hybrid, Toronto)",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [],
+      "listing": {
+        "title": "Product Management Internship (Hybrid, Toronto)",
+        "level": "Internship",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Masters graduates", "Young professionals"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216626002",
+        "applicationUrl": "https://job-boards.greenhouse.io/opentable/jobs/8216626002",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: OpenTable. 16-week MBA internship (product function): for first-year MBA students with 2-5 years prior work/internship experience in tech, consulting, or operations; hybrid, 2 days/week downtown Toronto. Best fit for the masters/MBA segment of the audience. Also seen on LinkedIn (job 4316649044). Checker (restricted network): Greenhouse page currently indexed with matching title; corroborated by ZipRecruiter, Workopolis and Jobright mirrors; one snippet quotes CAD $43/hr for this role (vs $42 for the undergrad cluster); Built In shows a repost bump 14 days before run date. Genuinely an internship for current MBA students, so the prior-experience expectation does not make it too-senior."
+      }
+    },
+    {
+      "title": "AI Automation Intern (Hybrid, Toronto)",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread", "stale-posting"],
+      "corrections": [
+        "listingUrl: https://ca.linkedin.com/jobs/view/ai-automation-intern-hybrid-toronto-at-opentable-4330540569 → https://job-boards.greenhouse.io/opentable/jobs/8348802002 (titled Greenhouse page found in search index: Job Application for AI Automation Intern (Hybrid, Toronto) at OpenTable)",
+        "applicationUrl: https://ca.linkedin.com/jobs/view/ai-automation-intern-hybrid-toronto-at-opentable-4330540569 → https://job-boards.greenhouse.io/opentable/jobs/8348802002",
+        "applicationSource: LinkedIn → Company Website"
+      ],
+      "listing": {
+        "title": "AI Automation Intern (Hybrid, Toronto)",
+        "level": "Internship",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Undergraduate students"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://job-boards.greenhouse.io/opentable/jobs/8348802002",
+        "applicationUrl": "https://job-boards.greenhouse.io/opentable/jobs/8348802002",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "search-to-linkedin",
+        "notes": "Brand: OpenTable. Part of the same Toronto hybrid internship cluster as the SWE/Data/PM roles; CAD $42/hr, 2 days/week downtown Toronto office. Build-first internship creating AI agents and workflow automations (automated triage, document extraction, data enrichment) that execute multi-step tasks, implemented under guidance from senior engineers. Checker (restricted network): repaired URL from the LinkedIn fallback to the now search-indexed Greenhouse page (8348802002); LinkedIn 4330540569 and Built In (8101193, actively hiring, repost bump 5 days before run date) corroborate; Built In dates the original posting to ~January 2026, hence stale-posting. Full eligibility details still unverified — audienceFit remains assumed to mirror the other Toronto engineering internships; confirm on direct fetch."
+      }
+    },
+    {
+      "title": "Associate Software Engineer",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread"],
+      "corrections": [],
+      "listing": {
+        "title": "Associate Software Engineer",
+        "level": "Associate",
+        "function": "Technology & Engineering",
+        "audienceFit": ["University graduates", "Masters graduates", "Young professionals"],
+        "location": { "city": "Cambridge", "country": "United States" },
+        "listingUrl": "https://jobs.ashbyhq.com/kayak/8333e351-7a08-4767-9966-f75411b78d80",
+        "applicationUrl": "https://jobs.ashbyhq.com/kayak/8333e351-7a08-4767-9966-f75411b78d80",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: KAYAK. Associate Front End Software Engineer on the Cars Meta UI team (React/TypeScript), delivering well-scoped features alongside senior engineers — clearly early-career. USD $95,000-$105,000 plus bonus and RSUs; hybrid, 3 days/week from Cambridge, MA or Concord, MA office. KAYAK hosts jobs on Ashby (jobs.ashbyhq.com/kayak). Checker (restricted network): exact Ashby URL currently indexed with matching title; corroborated by Glassdoor (separate Cambridge jl=1010204621703 and Concord jl=1010204621705 postings) and a studentscircles.com writeup matching the salary band."
+      }
+    },
+    {
+      "title": "Associate GRC Analyst",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread"],
+      "corrections": [],
+      "listing": {
+        "title": "Associate GRC Analyst",
+        "level": "Associate",
+        "function": "Legal & Compliance",
+        "audienceFit": ["University graduates", "Masters graduates"],
+        "location": { "city": "Cambridge", "country": "United States" },
+        "listingUrl": "https://jobs.ashbyhq.com/kayak/8ee1a151-4fbf-4ad1-a6ba-6ee5546c0aed",
+        "applicationUrl": "https://jobs.ashbyhq.com/kayak/8ee1a151-4fbf-4ad1-a6ba-6ee5546c0aed",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: KAYAK. Cyber Governance, Risk & Compliance team; listing says a great candidate has foundational GRC understanding with hands-on exposure through internships or academic projects — i.e., open to new graduates. USD $85,000-$95,000; Cambridge, MA (also advertised for Concord, MA). Checker (restricted network): exact Ashby URL currently indexed with matching title; startup.jobs mirror (8810789) corroborates; snippet explicitly frames it as an opportunity for an early-career professional. Snippets mix Cambridge and Concord for this role (one says 3 days/week from the Concord office) — confirm which office this Ashby req is tied to on direct fetch; either way it is US-based."
+      }
+    },
+    {
+      "title": "Commercial Operations Associate, K4B",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread"],
+      "corrections": [],
+      "listing": {
+        "title": "Commercial Operations Associate, K4B",
+        "level": "Associate",
+        "function": "Business Development & Partnerships",
+        "audienceFit": ["University graduates", "Young professionals"],
+        "location": { "city": "Cambridge", "country": "United States" },
+        "listingUrl": "https://jobs.ashbyhq.com/kayak/867d9b26-af8d-43af-ac13-39b9d93e214e",
+        "applicationUrl": "https://jobs.ashbyhq.com/kayak/867d9b26-af8d-43af-ac13-39b9d93e214e",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: KAYAK (KAYAK for Business, the corporate-travel arm). Hybrid, 3 days/week from Cambridge, MA office. Associate-titled commercial/business-operations role. Checker (restricted network): exact Ashby URL currently indexed with matching title; corroborated by the General Catalyst job board, Jobright and LinkedIn 4342914558 (matching the finder's cross-reference). Snippet responsibilities are support-level — prospect research, preparing materials, joining discovery calls, assisting account teams, someone who learns quickly — with no senior/lead language or years requirement visible, so the not-senior concern is resolved as far as snippets allow; confirm the exact experience bar on direct fetch."
+      }
+    },
+    {
+      "title": "Associate Java Developer",
+      "verdict": "pass",
+      "warnings": ["unverified-liveness (network-restricted)", "description-unread"],
+      "corrections": [],
+      "listing": {
+        "title": "Associate Java Developer",
+        "level": "Associate",
+        "function": "Technology & Engineering",
+        "audienceFit": ["Young professionals"],
+        "location": { "city": "Toronto", "country": "Canada" },
+        "listingUrl": "https://careers.priceline.com/job/r5644/",
+        "applicationUrl": "https://careers.priceline.com/job/r5644/",
+        "applicationSource": "Company Website",
+        "visaSponsorshipMentioned": "Not Mentioned",
+        "visaEvidence": null,
+        "descriptionRead": false,
+        "postedDate": null,
+        "deadline": null,
+        "foundVia": "careers-page",
+        "notes": "Brand: Priceline. Core Java, low-latency transactional services; requires Bachelor's in CS plus 2+ years Core Java experience — fits the 1-3-years young-professional segment, not fresh graduates (under the 3+ years too-senior bar, so it passes the level filter). CAD $85,000-$100,000; hybrid, 2 days in-office, Toronto. Posted roughly one month before run date per careers-site search results (req R5644, Workday-backed: priceline.wd1.myworkdayjobs.com). Checker (restricted network): R5644 corroborated by Jobs.ca, Indeed, jobrapido and two Ladders mirrors with matching title/city/salary and no closure signals; a small site:careers.priceline.com index sample did not surface R5644 itself but confirms the domain's live r-number pattern and shows a distinct sibling req R5696 (Associate Java Full-Stack Developer, big-data stack) — verify R5644 is still open on direct fetch."
+      }
+    }
+  ],
+  "checkerNotes": "RESTRICTED-NETWORK MODE: a test WebFetch of the first listing URL returned EGRESS_BLOCKED (proxy blocks all direct page fetches, matching the finder's own report), so this entire review is search-corroboration only — no listing page was read. All 9 listings pass on that standard: each is either currently indexed on the company's own ATS domain (job-boards.greenhouse.io/opentable for the iOS, Data, PM and AI reqs; jobs.ashbyhq.com/kayak for all three KAYAK roles) or corroborated by multiple independent mirrors (Priceline R5644; OpenTable general SWE internship), and no closure signal (no longer accepting, position filled) appeared in any snippet. Accordingly every pass carries unverified-liveness (network-restricted) and description-unread — liveness, deadlines, exact eligibility and visa language must all be re-verified from an unrestricted network before publishing. Repairs: the AI Automation Intern was upgraded from its LinkedIn fallback to its now-indexed Greenhouse page (8348802002). Remaining weak spot: the general Software Engineer Internship still has no indexed Greenhouse URL and its exact LinkedIn job ID no longer appears in the index (the listing itself is corroborated by Glassdoor, Jobs.ca, Built In and Welcome to the Jungle) — re-locate its canonical URL first. Freshness: the four OpenTable 8216xxx002 reqs predate the AI req (8348802002, ~Jan 2026 per Built In), placing their original postings around Oct-Nov 2025, hence stale-posting on all five OpenTable listings; countervailing evidence says they remain open (Built In actively-hiring flags with 5-14-day repost bumps, ZipRecruiter OpenTable Toronto page headed Aug 2026). One search summary mentioned an OpenTable Toronto internship term of May 4 - Aug 28, 2026 (which, if it applied to these reqs, would mean the cohort already started), but a targeted follow-up search could not attribute those dates to any of these listings via an actual source page, so it was not treated as a closure signal — check program term dates explicitly on direct fetch. Visa audit: all nine arrived as Not Mentioned with null evidence, no snippet showed sponsorship or right-to-work language for any listing, so nothing needed downgrading and nothing was upgraded. Duplicate check: first run, seenListings empty — no duplicates possible; the two OpenTable SWE internships (iOS vs general) are distinct reqs mirrored separately on Built In. Search budget used: 1 test fetch + 12 searches for 9 listings, within the ~2-per-listing-plus-repairs allowance."
+}

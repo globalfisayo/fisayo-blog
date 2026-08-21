@@ -1,0 +1,65 @@
+{
+  "company": "AirBnB",
+  "runDate": "2026-08-21",
+  "listingsFound": true,
+  "totalMatching": 3,
+  "methodsAttempted": {
+    "A_linkedinDirect": "Not completable in this environment: www.linkedin.com is egress-blocked by the network proxy (EGRESS_BLOCKED on both fetch attempts at company/airbnb/jobs), and the numeric company ID could not be recovered from web search either, so the f_C jobs-search URL was never buildable. LinkedIn coverage came only via Method C search snippets.",
+    "B_careersPage": "Direct browsing blocked: careers.airbnb.com is egress-blocked at the proxy (2 WebFetch attempts + a curl probe all refused with 403 CONNECT; in fact ALL outbound fetches to every domain are blocked in this run — only WebSearch works). Fell back to site:careers.airbnb.com searches, which surfaced live-looking 2026 postings (Software Engineer New Grad 7773838, iOS Software Engineer New Grad 7859317, ML Engineer Relevance & Personalization 7708224), the Greenhouse board (boards.greenhouse.io/airbnb), an internship-programs page (careers.airbnb.com/internship-programs/), plus several older-cycle intern listings judged stale (see companyNotes). No listing page could be opened, so every record has descriptionRead=false.",
+    "C_searchToLinkedin": "All four prescribed query patterns run. Surfaced current LinkedIn mirrors: 4409130289 (Software Engineer, Airbnb - New Grad, posted 2026-04-30 per snippet) and 4408023524 (iOS Software Engineer, Airbnb - New Grad, posted 2026-06-11 per snippet), plus 4204295660 (Software Engineer (New Grad), Search Feed, ~April 2025, likely closed — no longer in the careers-site index) and many clearly stale 2021/2024-era listings (MBA Intern 2021, 2024 summer interns, Connect Apprentice 2024, Appeals Associate Montreal) which were excluded. LinkedIn pages themselves could not be fetched (egress-blocked), so careers.airbnb.com URLs are used as source of record."
+  },
+  "listings": [
+    {
+      "title": "Software Engineer, Airbnb - New Grad",
+      "level": "New Grad",
+      "function": "Technology & Engineering",
+      "audienceFit": ["University graduates", "Masters graduates"],
+      "location": { "city": null, "country": "United States" },
+      "listingUrl": "https://careers.airbnb.com/positions/7773838/",
+      "applicationUrl": "https://careers.airbnb.com/positions/7773838/",
+      "applicationSource": "Company Website",
+      "visaSponsorshipMentioned": "Not Mentioned",
+      "visaEvidence": null,
+      "descriptionRead": false,
+      "postedDate": "2026-04-30",
+      "deadline": null,
+      "foundVia": "careers-page",
+      "notes": "Listing page could not be fetched (all outbound browsing egress-blocked this run) — details assembled from search snippets of careers.airbnb.com, boards.greenhouse.io/airbnb/jobs/7773838 and LinkedIn mirror 4409130289 (which showed posted 2026-04-30). Snippets: for recent Bachelor's/Master's graduates with <1 year full-time experience; US - Remote Eligible. UNVERIFIED secondhand (aggregator mirrors, not the listing itself): 'Work authorization for employment in the United States is required (OPT is accepted) - visa sponsorship is unavailable for this role.' Checker must fetch the listing to confirm liveness, location and the sponsorship clause."
+    },
+    {
+      "title": "iOS Software Engineer, Airbnb - New Grad",
+      "level": "New Grad",
+      "function": "Technology & Engineering",
+      "audienceFit": ["University graduates", "Masters graduates", "Young professionals"],
+      "location": { "city": null, "country": "United States" },
+      "listingUrl": "https://careers.airbnb.com/positions/7859317/",
+      "applicationUrl": "https://careers.airbnb.com/positions/7859317/",
+      "applicationSource": "Company Website",
+      "visaSponsorshipMentioned": "Not Mentioned",
+      "visaEvidence": null,
+      "descriptionRead": false,
+      "postedDate": "2026-06-11",
+      "deadline": null,
+      "foundVia": "careers-page",
+      "notes": "Listing page could not be fetched — details from search snippets (careers.airbnb.com posting ~May 2026; LinkedIn mirror 4408023524 posted 2026-06-11, used as postedDate). Snippets: recent graduates only (degree completed May 2023-present, <2 years full-time experience); US - Remote Eligible with preference for San Francisco or Seattle (3 days/week in office); Quality Reputation team. UNVERIFIED secondhand (BeBee/Dice/Simplify mirrors): 'Work authorization for employment in the United States is required (OPT is accepted) - visa sponsorship is unavailable for this role.' Checker must confirm on the listing."
+    },
+    {
+      "title": "Machine Learning Engineer, Relevance and Personalization",
+      "level": "Entry-level",
+      "function": "Technology & Engineering",
+      "audienceFit": ["Masters graduates", "Young professionals"],
+      "location": { "city": null, "country": "United States" },
+      "listingUrl": "https://careers.airbnb.com/positions/7708224/",
+      "applicationUrl": "https://careers.airbnb.com/positions/7708224/",
+      "applicationSource": "Company Website",
+      "visaSponsorshipMentioned": "Not Mentioned",
+      "visaEvidence": null,
+      "descriptionRead": false,
+      "postedDate": null,
+      "deadline": null,
+      "foundVia": "careers-page",
+      "notes": "Early-career eligible per snippets: 'new grad Ph.D in ML/AI or 2+ years of industry experience in applied ML/AI with an M.S. or B.S degree' — upper end of the early-career band. US - Remote Eligible ('must live in a state where Airbnb, Inc. has a registered entity'). Page not fetchable this run; posting date unknown (Greenhouse ID 7708224 sits just below the Apr-2026 new-grad req 7773838, and a recent Built In NYC mirror exists, suggesting a 2026 posting) — liveness unverified, checker should confirm."
+    }
+  ],
+  "companyNotes": "ENVIRONMENT CAVEAT: this run had no working browser — WebFetch/curl were egress-blocked for ALL domains (careers.airbnb.com, linkedin.com, everything), so every record comes from WebSearch result snippets only; all descriptionRead=false and every URL needs a liveness check downstream. WHERE AIRBNB POSTS: careers.airbnb.com on Greenhouse ATS (canonical listing URLs careers.airbnb.com/positions/{gh_jid}/, raw board at boards.greenhouse.io/airbnb, archive at careers.airbnb.com/positions/, programs at careers.airbnb.com/internship-programs/). Tech roles are typically 'US - Remote Eligible' but require residence in a state where Airbnb has a registered entity — good for candidates already in the US. SPONSORSHIP POSTURE: multiple aggregator mirrors of the 2026 new-grad SWE reqs carry 'Work authorization for employment in the United States is required (OPT is accepted) - visa sponsorship is unavailable for this role' — expect new-grad roles to be no-sponsorship (OPT-friendly), pending verification. INTERN CYCLE TIMING (why few interns listed today): the 2026 Summer Intern Program (June 22 - Sept 11, 2026) is ending, so its listings — Data Science Intern PhD (positions/7839237), Strategic Finance & Analytics Intern MBA (7488879), Advanced Analytics Intern MS/MBA (7556971), Legal Intern Privacy (7449273) — are past application and were excluded as stale; third-party guides say the summer-2027 cycle opens ~September 2026 (fall 2026), so re-check next month. Also excluded as likely-dead 2025-vintage postings still lingering in the index: Treasury Intern EMEA (6742053, Dublin/London), Strategic Finance & Analytics Intern EMEA (6980507, London), Legal Intern Privacy EMEA (LinkedIn 4182355320, Dublin), Software Engineer (New Grad) Search Feed (LinkedIn 4204295660, ~Apr 2025, no longer in careers index) — worth re-verifying once fetching works, since the EMEA ones are in target countries. Excluded on geography: Field Sales Intern EMEA Services (Paris/Milan/Barcelona), Sales Operations Intern Italy, Legal Intern Brazil. Excluded on level/prestige: Project Manager Early Career & Emerging Talent (runs the programs, not early-career itself), Associate Counsel (3-5 yrs), Appeals & Escalations Associate Montreal (frontline ops, 2024-era anyway). RECURRING PROGRAM: Connect Engineering Apprenticeship (careers.airbnb.com/connect-engineering-apprenticeship/) — SF, ~5 months, for non-traditional/underrepresented engineering backgrounds, application window opens ~April each year (2026 window likely closed by now) — a strong future fit for this audience. LinkedIn numeric company ID was never recovered; store it in companies-v1.json once someone can load linkedin.com/company/airbnb/jobs."
+}

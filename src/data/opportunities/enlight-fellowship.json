@@ -1,0 +1,21 @@
+{
+  "title": "Enlight Fellowship",
+  "slug": "enlight-fellowship",
+  "applyUrl": "https://watson.is/enlight-fellowship/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-05-19",
+  "deadline": "2026-06-05",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/365f2057607c80f8af93d92637fc7c00"
+}

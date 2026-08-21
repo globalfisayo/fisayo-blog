@@ -1,0 +1,21 @@
+{
+  "title": "USDA Internship Program",
+  "slug": "usda-internship-program",
+  "applyUrl": "https://www.usda.gov/internships/how-to-apply",
+  "types": [
+    "Internship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-12",
+  "deadline": "2026-03-02",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/305f2057607c806cb7a0fe7fcb819d91"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "IBRO EXCHANGE FELLOWSHIP",
+  "slug": "ibro-exchange-fellowship",
+  "applyUrl": "https://ibro.org/grant/exchange-fellowships/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-06",
+  "deadline": "2026-04-15",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2fff2057607c80679cf0c28be64db1f2"
+}

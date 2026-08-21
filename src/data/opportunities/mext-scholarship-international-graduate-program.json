@@ -1,0 +1,21 @@
+{
+  "title": "MEXT Scholarship International Graduate Program",
+  "slug": "mext-scholarship-international-graduate-program",
+  "applyUrl": "https://altair.sci.hokudai.ac.jp/grad/igpoverview/special-quota.php",
+  "types": [
+    "Scholarship"
+  ],
+  "status": "open",
+  "dateAdded": "2026-06-01",
+  "deadline": "2026-11-10",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/372f2057607c80c99a6bd5ed0477c9d5"
+}

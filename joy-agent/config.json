@@ -1,0 +1,13 @@
+{
+  "batchSize": 8,
+  "reviewQueueCap": 25,
+  "stalePostingDays": 45,
+  "workingBranch": "claude/joy-agent-visa-jobs-y06ee0",
+  "scheduleUtc": "06:00 daily",
+  "notes": {
+    "batchSize": "Companies researched per daily run. 8/day = full 200-company cycle every 25 days.",
+    "reviewQueueCap": "Max new listings queued for human review per day, priority-ordered (visa Yes first, explicit no-sponsorship last). Overflow stays in runs/<date>/checked-findings.json.",
+    "stalePostingDays": "Postings older than this without a stated deadline get a staleness warning from the Checker.",
+    "workingBranch": "All Joy Agent activity lives on this branch. The site only deploys from main, so daily runs never touch the live blog."
+  }
+}

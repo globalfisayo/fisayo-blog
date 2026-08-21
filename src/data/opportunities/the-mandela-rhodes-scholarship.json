@@ -1,0 +1,21 @@
+{
+  "title": "The Mandela Rhodes Scholarship",
+  "slug": "the-mandela-rhodes-scholarship",
+  "applyUrl": "https://www.mandelarhodes.org/scholarship/apply/",
+  "types": [
+    "Scholarship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-03-24",
+  "deadline": "2026-04-14",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/32df2057607c8044ad6ede192b4b6c6a"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "CONGRESSIONAL FELLOWSHIP PROGRAM",
+  "slug": "congressional-fellowship-program",
+  "applyUrl": "https://www.wilsoncenter.org/congressionalfellowshipprogram",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-12",
+  "deadline": "2026-03-02",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/305f2057607c808fbebac53f0025a10b"
+}

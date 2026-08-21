@@ -1,0 +1,21 @@
+{
+  "title": "Commonwealth Young Leaders Fellowship",
+  "slug": "commonwealth-young-leaders-fellowship",
+  "applyUrl": "https://cwlac.org/young-leaders-fellowship/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-07-13",
+  "deadline": "2026-07-19",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/39cf2057607c8097af11f06211836c09"
+}

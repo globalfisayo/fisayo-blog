@@ -1,0 +1,21 @@
+{
+  "title": "Amahoro Coalition Fellowship",
+  "slug": "amahoro-coalition-fellowship",
+  "applyUrl": "https://amahorocoalition.com/fellowship/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-02-04",
+  "deadline": "2026-05-04",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2fdf2057607c805ebd60f2bc73727785"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "OC Fellowship",
+  "slug": "oc-fellowship",
+  "applyUrl": "https://ocimpact.com/oc-global/ocfellowships/",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-01-24",
+  "deadline": "2026-02-16",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f2f2057607c80d3a117f518ac545737"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Ocean Leaders Fellowship",
+  "slug": "ocean-leaders-fellowship",
+  "applyUrl": "https://www.soalliance.org/ocean-leaders-fellowship",
+  "types": [
+    "Fellowship"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-01-23",
+  "deadline": "2026-02-15",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f1f2057607c807a9599cc0bbebb1aee"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "United People Global Community",
+  "slug": "united-people-global-community",
+  "applyUrl": "https://unitedpeople.global/join/",
+  "types": [
+    "Opportunity"
+  ],
+  "status": "open",
+  "dateAdded": "2026-01-30",
+  "deadline": null,
+  "deadlineNote": "Check link for deadline",
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f8f2057607c8044bea1c9b98f64fb6d"
+}

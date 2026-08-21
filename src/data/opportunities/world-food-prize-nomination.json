@@ -1,0 +1,21 @@
+{
+  "title": "World Food Prize Nomination",
+  "slug": "world-food-prize-nomination",
+  "applyUrl": "https://www.worldfoodprize.org/en/nominations/world_food_prize/world_food_prize_nomination/",
+  "types": [
+    "Grant"
+  ],
+  "status": "closed",
+  "dateAdded": "2026-01-30",
+  "deadline": "2026-05-01",
+  "deadlineNote": null,
+  "description": "",
+  "coverImage": null,
+  "coverImageUrl": null,
+  "sponsors": [
+    "Novola Charity Foundation",
+    "Fisayo.org"
+  ],
+  "source": "notion-migration",
+  "sourceRef": "https://app.notion.com/2f8f2057607c80368650f0da64b88c55"
+}

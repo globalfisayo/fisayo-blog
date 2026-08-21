@@ -1,4 +1,293 @@
 {
-  "note": "Registry of every listing ever surfaced, keyed by normalized listing URL. Prevents re-surfacing the same job into review on later visits.",
-  "listings": {}
+  "note": "Registry of every listing ever surfaced, keyed by normalized listing URL (lowercase host + path, query/fragment stripped). Prevents re-surfacing the same job into review on later visits.",
+  "listings": {
+    "job-boards.greenhouse.io/opentable/jobs/8216629002": {
+      "company": "Booking Holdings",
+      "title": "Software Engineer Internship - iOS",
+      "location": "Toronto, Canada",
+      "url": "https://job-boards.greenhouse.io/opentable/jobs/8216629002",
+      "joyId": "JOY-2026-08-21-026",
+      "firstSeen": "2026-08-21",
+      "status": "overflow (checked, not queued)"
+    },
+    "ca.linkedin.com/jobs/view/software-engineer-internship-hybrid-toronto-at-opentable-4316638518": {
+      "company": "Booking Holdings",
+      "title": "Software Engineer Internship (Hybrid, Toronto)",
+      "location": "Toronto, Canada",
+      "url": "https://ca.linkedin.com/jobs/view/software-engineer-internship-hybrid-toronto-at-opentable-4316638518",
+      "joyId": "JOY-2026-08-21-027",
+      "firstSeen": "2026-08-21",
+      "status": "overflow (checked, not queued)"
+    },
+    "job-boards.greenhouse.io/opentable/jobs/8216632002": {
+      "company": "Booking Holdings",
+      "title": "Data Engineer Internship (Hybrid, Toronto)",
+      "location": "Toronto, Canada",
+      "url": "https://job-boards.greenhouse.io/opentable/jobs/8216632002",
+      "joyId": "JOY-2026-08-21-017",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "job-boards.greenhouse.io/opentable/jobs/8216626002": {
+      "company": "Booking Holdings",
+      "title": "Product Management Internship (Hybrid, Toronto)",
+      "location": "Toronto, Canada",
+      "url": "https://job-boards.greenhouse.io/opentable/jobs/8216626002",
+      "joyId": "JOY-2026-08-21-019",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "job-boards.greenhouse.io/opentable/jobs/8348802002": {
+      "company": "Booking Holdings",
+      "title": "AI Automation Intern (Hybrid, Toronto)",
+      "location": "Toronto, Canada",
+      "url": "https://job-boards.greenhouse.io/opentable/jobs/8348802002",
+      "joyId": "JOY-2026-08-21-018",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "jobs.ashbyhq.com/kayak/8333e351-7a08-4767-9966-f75411b78d80": {
+      "company": "Booking Holdings",
+      "title": "Associate Software Engineer",
+      "location": "Cambridge, United States",
+      "url": "https://jobs.ashbyhq.com/kayak/8333e351-7a08-4767-9966-f75411b78d80",
+      "joyId": "JOY-2026-08-21-020",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "jobs.ashbyhq.com/kayak/8ee1a151-4fbf-4ad1-a6ba-6ee5546c0aed": {
+      "company": "Booking Holdings",
+      "title": "Associate GRC Analyst",
+      "location": "Cambridge, United States",
+      "url": "https://jobs.ashbyhq.com/kayak/8ee1a151-4fbf-4ad1-a6ba-6ee5546c0aed",
+      "joyId": "JOY-2026-08-21-021",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "jobs.ashbyhq.com/kayak/867d9b26-af8d-43af-ac13-39b9d93e214e": {
+      "company": "Booking Holdings",
+      "title": "Commercial Operations Associate, K4B",
+      "location": "Cambridge, United States",
+      "url": "https://jobs.ashbyhq.com/kayak/867d9b26-af8d-43af-ac13-39b9d93e214e",
+      "joyId": "JOY-2026-08-21-022",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.priceline.com/job/r5644": {
+      "company": "Booking Holdings",
+      "title": "Associate Java Developer",
+      "location": "Toronto, Canada",
+      "url": "https://careers.priceline.com/job/r5644/",
+      "joyId": "JOY-2026-08-21-023",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.airbnb.com/positions/7773838": {
+      "company": "AirBnB",
+      "title": "Software Engineer, Airbnb - New Grad",
+      "location": "—, United States",
+      "url": "https://careers.airbnb.com/positions/7773838/",
+      "joyId": "JOY-2026-08-21-024",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.airbnb.com/positions/7859317": {
+      "company": "AirBnB",
+      "title": "iOS Software Engineer, Airbnb - New Grad",
+      "location": "—, United States",
+      "url": "https://careers.airbnb.com/positions/7859317/",
+      "joyId": "JOY-2026-08-21-025",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.airbnb.com/positions/7708224": {
+      "company": "AirBnB",
+      "title": "Machine Learning Engineer, Relevance and Personalization",
+      "location": "—, United States",
+      "url": "https://careers.airbnb.com/positions/7708224/",
+      "joyId": "JOY-2026-08-21-028",
+      "firstSeen": "2026-08-21",
+      "status": "overflow (checked, not queued)"
+    },
+    "careers.mastercard.com/us/en/job/R-286204/Associate-Consultant-Intern-Summer-2027": {
+      "company": "Mastercard",
+      "title": "Associate Consultant Intern, Summer 2027",
+      "location": "Arlington, United States",
+      "url": "https://careers.mastercard.com/us/en/job/R-286204/Associate-Consultant-Intern-Summer-2027",
+      "joyId": "JOY-2026-08-21-001",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.mastercard.com/us/en/job/R-284621/Associate-Analyst-Sales-2027-Mastercard-Launch-Graduate-Program-Auckland-New-Zealand": {
+      "company": "Mastercard",
+      "title": "Associate Analyst, Sales - 2027 Mastercard Launch Graduate Program - Auckland, New Zealand",
+      "location": "Auckland, New Zealand",
+      "url": "https://careers.mastercard.com/us/en/job/R-284621/Associate-Analyst-Sales-2027-Mastercard-Launch-Graduate-Program-Auckland-New-Zealand",
+      "joyId": "JOY-2026-08-21-004",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.mastercard.com/us/en/job/R-280217/Associate-Product-Specialist-Product-Management-2027-Launch-Graduate-Program-Sydney-Australia": {
+      "company": "Mastercard",
+      "title": "Associate Product Specialist, Product Management, 2027 Launch Graduate Program - Sydney, Australia",
+      "location": "Sydney, Australia",
+      "url": "https://careers.mastercard.com/us/en/job/R-280217/Associate-Product-Specialist-Product-Management-2027-Launch-Graduate-Program-Sydney-Australia",
+      "joyId": "JOY-2026-08-21-005",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.mastercard.com/us/en/job/R-278974/Analyst-Strategy-Operations": {
+      "company": "Mastercard",
+      "title": "Analyst, Strategy & Operations",
+      "location": "New York, United States",
+      "url": "https://careers.mastercard.com/us/en/job/R-278974/Analyst-Strategy-Operations",
+      "joyId": "JOY-2026-08-21-008",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.mastercard.com/us/en/job/R-277430/FIU-Analyst": {
+      "company": "Mastercard",
+      "title": "FIU Analyst",
+      "location": "Purchase, United States",
+      "url": "https://careers.mastercard.com/us/en/job/R-277430/FIU-Analyst",
+      "joyId": null,
+      "firstSeen": "2026-08-21",
+      "status": "checker-failed (too-senior)"
+    },
+    "careers.mastercard.com/us/en/job/R-275231/Associate-Analyst-2027-Mastercard-Launch-Graduate-Program-Melbourne-Australia": {
+      "company": "Mastercard",
+      "title": "Associate Analyst, 2027 Mastercard Launch Graduate Program - Melbourne, Australia",
+      "location": "Melbourne, Australia",
+      "url": "https://careers.mastercard.com/us/en/job/R-275231/Associate-Analyst-2027-Mastercard-Launch-Graduate-Program-Melbourne-Australia",
+      "joyId": "JOY-2026-08-21-006",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "careers.mastercard.com/us/en/job/R-273420/Associate-Consultant-Advisors-Consulting-Services-2027-Launch-Graduate-Program-Sydney-Australia": {
+      "company": "Mastercard",
+      "title": "Associate Consultant, Advisors & Consulting Services, 2027 Launch Graduate Program - Sydney, Australia",
+      "location": "Sydney, Australia",
+      "url": "https://careers.mastercard.com/us/en/job/R-273420/Associate-Consultant-Advisors-Consulting-Services-2027-Launch-Graduate-Program-Sydney-Australia",
+      "joyId": null,
+      "firstSeen": "2026-08-21",
+      "status": "checker-failed (dead-link)"
+    },
+    "careers.mastercard.com/us/en/job/R-273419/Associate-Consultant-Advisors-Consulting-Services-2027-Launch-Graduate-Program-Melbourne-Australia": {
+      "company": "Mastercard",
+      "title": "Associate Consultant, Advisors & Consulting Services, 2027 Launch Graduate Program - Melbourne, Australia",
+      "location": "Melbourne, Australia",
+      "url": "https://careers.mastercard.com/us/en/job/R-273419/Associate-Consultant-Advisors-Consulting-Services-2027-Launch-Graduate-Program-Melbourne-Australia",
+      "joyId": null,
+      "firstSeen": "2026-08-21",
+      "status": "checker-failed (dead-link)"
+    },
+    "careers.mastercard.com/us/en/job/R-255330/Software-Engineer-I-2027-Mastercard-Launch-Graduate-Program-Sydney-Australia": {
+      "company": "Mastercard",
+      "title": "Software Engineer I, 2027 Mastercard Launch Graduate Program - Sydney, Australia",
+      "location": "Sydney, Australia",
+      "url": "https://careers.mastercard.com/us/en/job/R-255330/Software-Engineer-I-2027-Mastercard-Launch-Graduate-Program-Sydney-Australia",
+      "joyId": "JOY-2026-08-21-007",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/467361": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Canada: Supply Chain 2027 New Grad",
+      "location": "Mississauga, Canada",
+      "url": "https://www.pepsicojobs.com/main/jobs/467361",
+      "joyId": "JOY-2026-08-21-002",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/467316": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Canada: Sales 2027 New Grad",
+      "location": "Sudbury, Canada",
+      "url": "https://www.pepsicojobs.com/main/jobs/467316?lang=en-us",
+      "joyId": "JOY-2026-08-21-003",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/450411": {
+      "company": "PepsiCo",
+      "title": "2027 Summer Intern: Marketing - MBA",
+      "location": "Purchase, United States",
+      "url": "https://www.pepsicojobs.com/main/jobs/450411?lang=en-us",
+      "joyId": "JOY-2026-08-21-009",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/450412": {
+      "company": "PepsiCo",
+      "title": "2027 Summer Intern: Global Procurement - MBA",
+      "location": "Purchase, United States",
+      "url": "https://www.pepsicojobs.com/main/jobs/450412?lang=en-us",
+      "joyId": "JOY-2026-08-21-010",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/468233": {
+      "company": "PepsiCo",
+      "title": "R&D Lab Associate Scientist",
+      "location": "Leicester, United Kingdom",
+      "url": "https://www.pepsicojobs.com/main/jobs/468233?lang=en-us",
+      "joyId": "JOY-2026-08-21-011",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/456301": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Foods New Graduate Program Fall 2026",
+      "location": "—, Canada",
+      "url": "https://www.pepsicojobs.com/main/jobs/456301?lang=en-us",
+      "joyId": "JOY-2026-08-21-012",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/458145": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Canada: 2026 Junior Data Scientist New Grad",
+      "location": "Mississauga, Canada",
+      "url": "https://www.pepsicojobs.com/main/jobs/458145?lang=en-us",
+      "joyId": "JOY-2026-08-21-013",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/canada/jobs/452288": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Canada: Fall 2026 Marketing Co-op",
+      "location": "Mississauga, Canada",
+      "url": "https://www.pepsicojobs.com/canada/jobs/452288?lang=en-us",
+      "joyId": "JOY-2026-08-21-014",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/main/jobs/452289": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Canada: Fall 2026 Customer Development Co-op",
+      "location": "Mississauga, Canada",
+      "url": "https://www.pepsicojobs.com/main/jobs/452289?lang=en-us",
+      "joyId": "JOY-2026-08-21-015",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "www.pepsicojobs.com/canada/jobs/453951": {
+      "company": "PepsiCo",
+      "title": "PepsiCo Beverages Canada - Fall 2026 Fleet Supply Chain Co-op",
+      "location": "Mississauga, Canada",
+      "url": "https://www.pepsicojobs.com/canada/jobs/453951?lang=en-us",
+      "joyId": "JOY-2026-08-21-016",
+      "firstSeen": "2026-08-21",
+      "status": "pending-review"
+    },
+    "ca.linkedin.com/jobs/view/ai-automation-intern-hybrid-toronto-at-opentable-4330540569": {
+      "company": "Booking Holdings",
+      "title": "AI Automation Intern (Hybrid, Toronto)",
+      "location": "Toronto, Canada",
+      "url": "https://ca.linkedin.com/jobs/view/ai-automation-intern-hybrid-toronto-at-opentable-4330540569",
+      "joyId": "JOY-2026-08-21-018",
+      "firstSeen": "2026-08-21",
+      "status": "alias-of JOY-2026-08-21-018 (URL repaired to Greenhouse by checker)"
+    }
+  }
 }

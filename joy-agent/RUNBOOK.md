@@ -108,11 +108,12 @@ none — paste these inline, they are small).
 - Assign each **passed** listing a stable id: `JOY-<runDate>-NNN` (NNN =
   001, 002, … in priority order across the whole run: visa "Yes" first,
   then "Not Mentioned" by most recent posting, "No – Right to Work
-  Required" last), recorded in a `joyId` field in the checked file.
-- `runs/<runDate>/checked-findings.json` = a small index:
-  `{"runDate": …, "companies": {"<id>": {"passed": n, "failed": n,
-  "file": "checked/<id>.json"}}}` — verdict ingestion (Step 1) follows the
-  index to the per-company files.
+  Required" last).
+- `runs/<runDate>/checked-findings.json` = the index: per-company
+  `{passed, failed, file}` counts plus a `joyIds` map (`joyId → {company,
+  title, listingUrl, file, queued}`) — verdict ingestion (Step 1) resolves
+  a JOY id through this map to the listing's full record in the
+  per-company checked file (match by title + listingUrl).
 
 ## Step 5 — Route the results
 

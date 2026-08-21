@@ -35,3 +35,19 @@ Hebron says so.
 
 *None yet. Rules appear here as the human reviewer approves/rejects queued
 opportunities and patterns emerge from `feedback-log.jsonl`.*
+
+## Operational learnings (from Checker rejections — the finder should apply these too)
+
+- **2026-08-21 — analyst-band titles can hide senior requirements.** A
+  Mastercard "FIU Analyst" role labelled Junior by the finder actually
+  required 3–5 years of AML/CFT experience (even the "FIU Associate
+  Analyst" tier below it asks 2–5). In compliance, risk, and finance
+  functions, never infer "Junior/Entry" from the title alone — find the
+  years-of-experience line, and if it can't be found, say so in `notes`
+  instead of guessing the level.
+- **2026-08-21 — careers-site index presence ≠ live.** Two Mastercard 2027
+  Launch consulting-track reqs were still in the company's careers search
+  index 3.5 months after a mirror feed recorded them removed (window
+  2026-03-20 → 2026-05-01). Prefer recency signals (repost bumps,
+  actively-hiring flags in currently-ingested feeds) over bare index
+  presence, and note the strongest liveness evidence per listing.

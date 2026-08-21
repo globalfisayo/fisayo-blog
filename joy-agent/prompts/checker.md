@@ -122,6 +122,13 @@ switch modes rather than failing everything as `unverifiable`:
   passed) → treat as live **with the mandatory warning
   `unverified-liveness (network-restricted)`**. No index presence at all, or
   closure signals → `fail` (`dead-link` / `unverifiable`).
+  - Caution (learned 2026-08-21): a company careers-site search index can
+    stay months stale — a Mastercard req was still indexed 3.5 months after
+    a mirror recorded it removed. Weigh recently-ingested mirror feeds that
+    track removal (Built In, Prosple and similar "actively hiring"/repost
+    signals) above bare index presence, and treat a removal date on a
+    reputable mirror as a closure signal even when the company index still
+    lists the job.
 - **Visa audit** tightens: with no page read, `"Yes"` is never allowed —
   downgrade any unquoted "Yes" to `"Not Mentioned"`. Sponsorship language
   seen only in search snippets or aggregator mirrors goes into the listing's

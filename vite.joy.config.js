@@ -72,6 +72,22 @@ function oppsIndexPlugin() {
       // index.html.
       const built = path.join(outDir, 'joy.html');
       if (fs.existsSync(built)) fs.renameSync(built, path.join(outDir, 'index.html'));
+      // public/.htaccess is the BLOG's SPA fallback (RewriteBase /blog/) and
+      // gets copied into this build too — replace it with the /joy/ version
+      // so stray deep links land back on this page, not on the blog.
+      fs.writeFileSync(
+        path.join(outDir, '.htaccess'),
+        [
+          '# Single-page app at /joy/: any path under it serves index.html.',
+          'RewriteEngine On',
+          'RewriteBase /joy/',
+          'RewriteRule ^index\\.html$ - [L]',
+          'RewriteCond %{REQUEST_FILENAME} !-f',
+          'RewriteCond %{REQUEST_FILENAME} !-d',
+          'RewriteRule . index.html [L]',
+          '',
+        ].join('\n'),
+      );
       const index = buildIndex().sort(
         (a, b) => new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0),
       );

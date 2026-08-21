@@ -17,3 +17,6 @@ dist/
 
 # Logs
 npm-debug.log*
+
+# Opportunity Universe build output
+dist-joy/

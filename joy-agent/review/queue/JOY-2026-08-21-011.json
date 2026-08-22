@@ -1,6 +1,6 @@
 {
-  "verdict": "pending",
-  "rejectReason": "",
+  "verdict": "reject",
+  "rejectReason": "It doesnt say anything about visa sponsorship, but this feedback is just a test, so ignore in training",
   "title": "R&D Lab Associate Scientist",
   "joyId": "JOY-2026-08-21-011",
   "company": "PepsiCo",
@@ -11,8 +11,6 @@
   "applyUrl": "https://www.pepsicojobs.com/main/jobs/468233?lang=en-us",
   "listingUrl": "https://www.pepsicojobs.com/main/jobs/468233?lang=en-us",
   "visaSponsorship": "Not Mentioned",
-  "deadline": null,
-  "postedDate": null,
   "foundOn": "2026-08-21",
   "checkerNotes": "PASS — warnings: unverified-liveness (network-restricted), description-unread, seniority-unverified. currently indexed on pepsicojobs.com under this exact title/ID ('in Leicester, United Kingdom'); no closure signals. Dedicated repair search surfaced NO experience-requirement snippets, so the finder's seniority question remains open — adjacent Leicester postings show an 'Assistant Scientist' rung below this one, so 'Associate' is plausibly but not provably entry-level. Human should confirm experience requirements fr…"
 }

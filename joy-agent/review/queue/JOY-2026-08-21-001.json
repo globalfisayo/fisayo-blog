@@ -1,6 +1,5 @@
 {
-  "verdict": "pending",
-  "rejectReason": "",
+  "verdict": "approve",
   "title": "Associate Consultant Intern, Summer 2027",
   "joyId": "JOY-2026-08-21-001",
   "company": "Mastercard",
@@ -11,8 +10,6 @@
   "applyUrl": "https://careers.mastercard.com/us/en/job/R-286204/Associate-Consultant-Intern-Summer-2027",
   "listingUrl": "https://careers.mastercard.com/us/en/job/R-286204/Associate-Consultant-Intern-Summer-2027",
   "visaSponsorship": "Not Mentioned",
-  "deadline": null,
-  "postedDate": null,
   "foundOn": "2026-08-21",
   "checkerNotes": "PASS — warnings: unverified-liveness (network-restricted), description-unread. corroborated live via the company's own search-index entry ('in Arlington, United States of America, 22203 | R-286204') plus BeBee and Teal mirrors; search metadata indicates posted about 1 week before run date; no closure signals. Mirrors suggest sibling reqs may exist for other US cities (e.g. San Francisco) under separate requisitions."
 }
